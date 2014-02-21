@@ -1,0 +1,12 @@
+AttributeDefinition
+name			definedInConcinnityModule
+dmdID			1
+type			ConcinnityModule
+description		Indicates the name of the ConcinnityModule in which a definition is defined.
+
+AttributeDefinition
+name			dependsOnConcinnityModule
+dmdID			2
+type			ConcinnityModule
+valueType       MULTI
+description		Indicates the ConcinnityModule on which something depends.

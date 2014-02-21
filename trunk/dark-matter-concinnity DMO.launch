@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/dark-matter-concinnity"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.dmd.dms.tools.dmogenerator.DmoGeneratorMain"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-concinnity/src dark-matter-concinnity/test dark-matter-data/src -jars dark-matter-data -autogen"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dark-matter-concinnity"/>
+</launchConfiguration>
