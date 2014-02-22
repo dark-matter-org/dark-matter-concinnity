@@ -33,13 +33,18 @@ public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
 
     public final static DmcAttributeInfo __definedInConcinnityModule = new DmcAttributeInfo("dmconcinnity", "definedInConcinnityModule", -41999, "ConcinnityModule", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
     public final static DmcAttributeInfo __dependsOnConcinnityModule = new DmcAttributeInfo("dmconcinnity", "dependsOnConcinnityModule", -41998, "ConcinnityModule", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __derivedFrom = new DmcAttributeInfo("dmconcinnity", "derivedFrom", -41996, "Concept", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __isA = new DmcAttributeInfo("dmconcinnity", "isA", -41997, "Concept", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT);
+    public final static DmcAttributeInfo __relatedTo = new DmcAttributeInfo("dmconcinnity", "relatedTo", -41995, "Concept", ValueTypeEnum.MULTI, DataTypeEnum.PERSISTENT);
 
     // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:176)
+    public final static DmcTypeInfo __type_Concept = new DmcTypeInfo("Concept", OriginalTypeEnum.REFERENCE);
     public final static DmcTypeInfo __type_ConcinnityDefinition = new DmcTypeInfo("ConcinnityDefinition", OriginalTypeEnum.REFERENCE);
     public final static DmcTypeInfo __type_ConcinnityModule = new DmcTypeInfo("ConcinnityModule", OriginalTypeEnum.REFERENCE);
 
     // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:217)
     public final static DmcClassInfo __ConcinnityDefinition = new DmcClassInfo("ConcinnityDefinition","org.dmd.concinnity.shared.generated.dmo.ConcinnityDefinitionDMO", -41998, ClassTypeEnum.ABSTRACT, DataTypeEnum.PERSISTENT,MetaDMSAG.__Concinnity,MetaDMSAG.__name);
+    public final static DmcClassInfo __Concept = new DmcClassInfo("Concept","org.dmd.concinnity.shared.generated.dmo.ConceptDMO", -41997, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,__ConcinnityDefinition,MetaDMSAG.__name);
     public final static DmcClassInfo __ConcinnityModule = new DmcClassInfo("ConcinnityModule","org.dmd.concinnity.shared.generated.dmo.ConcinnityModuleDMO", -41999, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,__ConcinnityDefinition,MetaDMSAG.__name);
 
     static  HashMap<Integer, DmcClassInfo> _CmAp;
@@ -84,6 +89,11 @@ public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
         __ConcinnityDefinition.addMust(MetaDMSAG.__name);
         __ConcinnityDefinition.addMust(MetaDMSAG.__dotName);
         __ConcinnityDefinition.addMust(__definedInConcinnityModule);
+
+        __Concept.addMust(MetaDMSAG.__name);
+        __Concept.addMay(__isA);
+        __Concept.addMay(__derivedFrom);
+        __Concept.addMay(__relatedTo);
 
         __ConcinnityModule.addMust(MetaDMSAG.__name);
         __ConcinnityModule.addMay(MetaDMSAG.__loadSchemaClass);

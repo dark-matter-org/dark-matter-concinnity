@@ -20,6 +20,12 @@ useWrapperType	EXTENDED
 derivedFrom		ConcinnityDefinition
 isNamedBy		name
 must			name
+may				isA
+may				basedOn
+may				relatedTo
+//nvp				garbage		"This is just garbage"
+//nvp				garbage		"And this is more garbage"
+//nvp				someValue	5
 description		The Concept class provides a flexible mechanism for defining concepts that can be
  linked in arbitrary or structured ways to other concepts. Concepts allow other, disparate information
  from other dark-matter Domain Specific Languages (DSLs) to be linked together at a conceptual level.

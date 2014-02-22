@@ -16,7 +16,8 @@ import org.dmd.dms.Concinnity;                                                  
 
 
 /**
- * The GpbDefinition provides a common base for all dark-matter
+ * The ConcinnityDefinition provides a common base for all Concinnity related
+ * definitions.
  * <P>
  * Generated from the dmconcinnity schema at version unknown
  * <P>

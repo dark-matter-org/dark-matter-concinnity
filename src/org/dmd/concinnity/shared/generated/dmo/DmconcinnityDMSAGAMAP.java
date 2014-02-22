@@ -13,6 +13,9 @@ public class DmconcinnityDMSAGAMAP {
     static protected void initSmAp(HashMap<Integer, DmcAttributeInfo> _SmAp){
         _SmAp.put(DmconcinnityDMSAG.__definedInConcinnityModule.id,DmconcinnityDMSAG.__definedInConcinnityModule);
         _SmAp.put(DmconcinnityDMSAG.__dependsOnConcinnityModule.id,DmconcinnityDMSAG.__dependsOnConcinnityModule);
+        _SmAp.put(DmconcinnityDMSAG.__derivedFrom.id,DmconcinnityDMSAG.__derivedFrom);
+        _SmAp.put(DmconcinnityDMSAG.__isA.id,DmconcinnityDMSAG.__isA);
+        _SmAp.put(DmconcinnityDMSAG.__relatedTo.id,DmconcinnityDMSAG.__relatedTo);
     }
 
 }

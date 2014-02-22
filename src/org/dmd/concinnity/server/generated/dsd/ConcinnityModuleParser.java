@@ -18,6 +18,7 @@ package org.dmd.concinnity.server.generated.dsd;
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParser(DSDArtifactFormatter.java:468)
 import java.util.Iterator;                                                              // To iterate over collections - (DSDArtifactFormatter.java:437)
+import org.dmd.concinnity.server.extended.Concept;                                      // A definition from the ConcinnityModule Module - (DSDArtifactFormatter.java:737)
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;                         // The base definition from the ConcinnityModule Module - (DSDArtifactFormatter.java:729)
 import org.dmd.concinnity.server.extended.ConcinnityModule;                             // The kind of DDM we're reading - (DSDArtifactFormatter.java:458)
 import org.dmd.concinnity.server.generated.DmconcinnitySchemaAG;                        // The schema recognized by this parser - (DSDArtifactFormatter.java:446)
@@ -192,6 +193,10 @@ public class ConcinnityModuleParser implements DsdParserInterface, DmcUncheckedO
             definition.setDefinedInConcinnityModule(module);
             definition.setDotName(module.getName() + "." + definition.getName() + "." + definition.getConstructionClassName());
             
+            if (definition instanceof Concept){
+                definitions.addConcept((Concept)definition);
+                module.addConcept((Concept)definition);
+            }
 
         }
 
