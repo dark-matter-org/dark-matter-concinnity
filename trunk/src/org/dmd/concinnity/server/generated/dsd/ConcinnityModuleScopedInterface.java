@@ -18,6 +18,7 @@ package org.dmd.concinnity.server.generated.dsd;
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateScopedInterface(DSDArtifactFormatter.java:399)
 import java.util.Iterator;                                              // To provide iterators over definitions - (DSDArtifactFormatter.java:396)
+import org.dmd.concinnity.server.extended.Concept;                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:174)
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;         // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:161)
 import org.dmd.dmc.types.DotName;                                       // To support the find method for definitions - (DSDefinitionModule.java:163)
 
@@ -31,6 +32,11 @@ public interface ConcinnityModuleScopedInterface {
     public int getConcinnityDefinitionCount();
     public ConcinnityDefinition getConcinnityDefinition(DotName name);
     public Iterator<ConcinnityDefinition> getAllConcinnityDefinition();
+
+    public void addConcept(Concept def);
+    public int getConceptCount();
+    public Concept getConcept(DotName name);
+    public Iterator<Concept> getAllConcept();
 
 }
 

@@ -38,10 +38,14 @@ import org.dmd.concinnity.shared.generated.dmo.DmconcinnityDMSAG;
 public class DmconcinnitySchemaAG extends SchemaDefinition {
 
     public static ClassDefinition _ConcinnityDefinition;
+    public static ClassDefinition _Concept;
     public static ClassDefinition _ConcinnityModule;
 
     public static AttributeDefinition _definedInConcinnityModule;
     public static AttributeDefinition _dependsOnConcinnityModule;
+    public static AttributeDefinition _isA;
+    public static AttributeDefinition _derivedFrom;
+    public static AttributeDefinition _relatedTo;
 
 
 
@@ -90,8 +94,8 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _ConcinnityDefinitionOBJ.setDmdID("-41998");
             _ConcinnityDefinitionOBJ.setClassType("ABSTRACT");
             _ConcinnityDefinitionOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/classes.dmd");
-            _ConcinnityDefinitionOBJ.setLineNumber("13");
-            _ConcinnityDefinitionOBJ.addDescription("The GpbDefinition provides a common base for all dark-matter");
+            _ConcinnityDefinitionOBJ.setLineNumber("14");
+            _ConcinnityDefinitionOBJ.addDescription("The ConcinnityDefinition provides a common base for all Concinnity related definitions.");
             _ConcinnityDefinitionOBJ.setDerivedFrom("meta.Concinnity");
             _ConcinnityDefinitionOBJ.setIsNamedBy("meta.name");
             _ConcinnityDefinitionOBJ.setUseWrapperType("EXTENDED");
@@ -105,6 +109,30 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _ConcinnityDefinitionOBJ.setDotName("dmconcinnity.ConcinnityDefinition.ClassDefinition");
             _ConcinnityDefinition.setDefinedIn(this);
             addClassDefList(_ConcinnityDefinition);
+
+// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
+            ClassDefinitionDMO _ConceptOBJ = new ClassDefinitionDMO();
+            _Concept = new ClassDefinition(_ConceptOBJ,DmconcinnityDMSAG.__Concept);
+            _ConceptOBJ.setName("Concept");
+            _ConceptOBJ.setDmdID("-41997");
+            _ConceptOBJ.setClassType("STRUCTURAL");
+            _ConceptOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/classes.dmd");
+            _ConceptOBJ.setLineNumber("31");
+            _ConceptOBJ.addDescription("The Concept class provides a flexible mechanism for defining concepts that can be\n linked in arbitrary or structured ways to other concepts. Concepts allow other, disparate information\n from other dark-matter Domain Specific Languages (DSLs) to be linked together at a conceptual level.\n <p/>\n How you use this mechanism is bounded only by your imagination.");
+            _ConceptOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
+            _ConceptOBJ.setIsNamedBy("meta.name");
+            _ConceptOBJ.setUseWrapperType("EXTENDED");
+            _ConceptOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConceptREF");
+            _ConceptOBJ.setDmwIteratorClass("ConceptIterableDMW");
+            _ConceptOBJ.addMay("dmconcinnity.isA");
+            _ConceptOBJ.addMay("dmconcinnity.derivedFrom");
+            _ConceptOBJ.addMay("dmconcinnity.relatedTo");
+            _ConceptOBJ.addMust("meta.name");
+            _ConceptOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW");
+            _ConceptOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
+            _ConceptOBJ.setDotName("dmconcinnity.Concept.ClassDefinition");
+            _Concept.setDefinedIn(this);
+            addClassDefList(_Concept);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             ClassDefinitionDMO _ConcinnityModuleOBJ = new ClassDefinitionDMO();
@@ -159,8 +187,49 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _dependsOnConcinnityModuleOBJ.setDotName("dmconcinnity.dependsOnConcinnityModule.AttributeDefinition");
             _dependsOnConcinnityModule.setDefinedIn(this);
             _dependsOnConcinnityModuleOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
-            _dependsOnConcinnityModuleOBJ.setLineNumber("12");
+            _dependsOnConcinnityModuleOBJ.setLineNumber("13");
             addAttributeDefList(_dependsOnConcinnityModule);
+
+// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
+            AttributeDefinitionDMO _isAOBJ = new AttributeDefinitionDMO();
+            _isA = new AttributeDefinition(_isAOBJ);
+            _isAOBJ.setType("dmconcinnity.Concept");
+            _isAOBJ.setName("isA");
+            _isAOBJ.setDmdID("-41997");
+            _isAOBJ.addDescription("Indicates that a Concept is directly related to one or more other Concepts.\n This could be used to model a derivation hierarchy, for example, or to allow some Concept \n to choose from a set of other Concepts that it directly embodies.\n <p/>\n Don't view this as a programming idea. Think of it in the truly abstract sense.\n <p/>\n If you really want to represent derivation, use the derivedFrom attribute instead.");
+            _isAOBJ.setValueType("MULTI");
+            _isAOBJ.setDotName("dmconcinnity.isA.AttributeDefinition");
+            _isA.setDefinedIn(this);
+            _isAOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _isAOBJ.setLineNumber("26");
+            addAttributeDefList(_isA);
+
+// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
+            AttributeDefinitionDMO _derivedFromOBJ = new AttributeDefinitionDMO();
+            _derivedFrom = new AttributeDefinition(_derivedFromOBJ);
+            _derivedFromOBJ.setType("dmconcinnity.Concept");
+            _derivedFromOBJ.setName("derivedFrom");
+            _derivedFromOBJ.setDmdID("-41996");
+            _derivedFromOBJ.addDescription("Indicates that a Concept is directly derived from some other concept\n in order to create a generalization hierarchy.");
+            _derivedFromOBJ.setDotName("dmconcinnity.derivedFrom.AttributeDefinition");
+            _derivedFrom.setDefinedIn(this);
+            _derivedFromOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _derivedFromOBJ.setLineNumber("33");
+            addAttributeDefList(_derivedFrom);
+
+// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
+            AttributeDefinitionDMO _relatedToOBJ = new AttributeDefinitionDMO();
+            _relatedTo = new AttributeDefinition(_relatedToOBJ);
+            _relatedToOBJ.setType("dmconcinnity.Concept");
+            _relatedToOBJ.setName("relatedTo");
+            _relatedToOBJ.setDmdID("-41995");
+            _relatedToOBJ.addDescription("Indicates that a Concept is generally related to one or more other Concepts.");
+            _relatedToOBJ.setValueType("MULTI");
+            _relatedToOBJ.setDotName("dmconcinnity.relatedTo.AttributeDefinition");
+            _relatedTo.setDefinedIn(this);
+            _relatedToOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _relatedToOBJ.setLineNumber("39");
+            addAttributeDefList(_relatedTo);
 
     }
 

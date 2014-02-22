@@ -11,6 +11,7 @@ import org.dmd.dmc.*;             // Basic DMC stuff - (DmoCompactSchemaFormatte
 public class DmconcinnityDMSAGCMAP {
 
     static protected void initCmAp(HashMap<Integer, DmcClassInfo> _CmAp){
+        _CmAp.put(DmconcinnityDMSAG.__Concept.id,DmconcinnityDMSAG.__Concept);
         _CmAp.put(DmconcinnityDMSAG.__ConcinnityDefinition.id,DmconcinnityDMSAG.__ConcinnityDefinition);
         _CmAp.put(DmconcinnityDMSAG.__ConcinnityModule.id,DmconcinnityDMSAG.__ConcinnityModule);
     }

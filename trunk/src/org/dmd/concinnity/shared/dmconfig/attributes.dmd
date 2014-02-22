@@ -10,3 +10,30 @@ dmdID			2
 type			ConcinnityModule
 valueType       MULTI
 description		Indicates the ConcinnityModule on which something depends.
+
+AttributeDefinition
+name			isA
+dmdID			3
+type			Concept
+valueType       MULTI
+description		Indicates that a Concept is directly related to one or more other Concepts.
+ This could be used to model a derivation hierarchy, for example, or to allow some Concept 
+ to choose from a set of other Concepts that it directly embodies.
+ <p/>
+ Don't view this as a programming idea. Think of it in the truly abstract sense.
+ <p/>
+ If you really want to represent derivation, use the basedOn attribute instead.
+
+AttributeDefinition
+name			basedOn
+dmdID			4
+type			Concept
+description		Indicates that a Concept is directly based on some other concept
+ in order to create a generalization hierarchy.
+ 
+AttributeDefinition
+name			relatedTo
+dmdID			5
+type			Concept
+valueType       MULTI
+description		Indicates that a Concept is generally related to one or more other Concepts.

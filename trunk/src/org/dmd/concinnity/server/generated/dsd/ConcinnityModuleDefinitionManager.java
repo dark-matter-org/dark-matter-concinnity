@@ -18,6 +18,7 @@ package org.dmd.concinnity.server.generated.dsd;
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
 // Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateDefinitionManager(DSDArtifactFormatter.java:144)
 import java.util.Iterator;                                                              // To allow access to our definitions - (DSDArtifactFormatter.java:131)
+import org.dmd.concinnity.server.extended.Concept;                                      // A definition from the ConcinnityModule Module - (DSDArtifactFormatter.java:281)
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;                         // A definition from the ConcinnityModule Module - (DSDArtifactFormatter.java:277)
 import org.dmd.concinnity.server.extended.ConcinnityModule;                             // A definition from the ConcinnityModule Module - (DSDArtifactFormatter.java:281)
 import org.dmd.concinnity.server.generated.dsd.ConcinnityModuleGlobalInterface;         // Interface for ConcinnityModule definitions - (DSDArtifactFormatter.java:274)
@@ -43,6 +44,7 @@ public class ConcinnityModuleDefinitionManager implements ConcinnityModuleGlobal
 
     // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.dumpDefinitionManagerMembers(DSDArtifactFormatter.java:300)
     DmcDefinitionSet<ConcinnityDefinition> ConcinnityDefinitionDefs;
+    DmcDefinitionSet<Concept> ConceptDefs;
     DmcDefinitionSet<ConcinnityModule> ConcinnityModuleDefs;
 
     public ConcinnityModuleDefinitionManager(){
@@ -52,6 +54,7 @@ public class ConcinnityModuleDefinitionManager implements ConcinnityModuleGlobal
 
         // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.initializeDefinitionManagerMembers(DSDArtifactFormatter.java:327)
         ConcinnityDefinitionDefs = new DmcDefinitionSet<ConcinnityDefinition>("ConcinnityDefinition", allDefinitions);
+        ConceptDefs = new DmcDefinitionSet<Concept>("Concept", allDefinitions);
         ConcinnityModuleDefs = new DmcDefinitionSet<ConcinnityModule>("ConcinnityModule", allDefinitions);
 
     }
@@ -165,6 +168,24 @@ public class ConcinnityModuleDefinitionManager implements ConcinnityModuleGlobal
 
     public Iterator<ConcinnityDefinition> getAllConcinnityDefinition(){
         return(ConcinnityDefinitionDefs.values().iterator());
+    }
+
+    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:254)
+    public void addConcept(Concept def){
+        ConceptDefs.add(def);
+        addConcinnityDefinition(def);
+    }
+
+    public int getConceptCount(){
+        return(ConceptDefs.size());
+    }
+
+    public Concept getConcept(DotName name){
+        return(ConceptDefs.getDefinition(name));
+    }
+
+    public Iterator<Concept> getAllConcept(){
+        return(ConceptDefs.values().iterator());
     }
 
     // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:254)

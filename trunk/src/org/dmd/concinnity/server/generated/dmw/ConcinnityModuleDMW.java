@@ -4,6 +4,7 @@ package org.dmd.concinnity.server.generated.dmw;
 // Called from: org.dmd.dmg.generators.BaseDMWGenerator.dumpWrapper(BaseDMWGenerator.java:442)
 import java.util.ArrayList;                                                             // To support getMVCopy() - (BaseDMWGenerator.java:1181)
 import java.util.Iterator;                                                              // Support copy of MV objects - (BaseDMWGenerator.java:2240)
+import org.dmd.concinnity.server.extended.Concept;                                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:174)
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;                         // Derived class - (BaseDMWGenerator.java:1248)
 import org.dmd.concinnity.server.extended.ConcinnityModule;                             // Required for getModificationRecorder() - (BaseDMWGenerator.java:1076)
 import org.dmd.concinnity.server.generated.dmw.ConcinnityModuleIterableDMW;             // For multi-valued ConcinnityModule - (BaseDMWGenerator.java:1709)
@@ -35,6 +36,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
     // Generated from: org.dmd.util.codegen.MemberManager.getFormattedMembers(MemberManager.java:64)
     // Called from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperDefinitions(DMWGenerator.java:203)
     DmcDefinitionSet<ConcinnityDefinition>     ConcinnityDefinitionDefs    = new DmcDefinitionSet<ConcinnityDefinition>("ConcinnityModule-allDefinitions");     // All definitions associated with this module
+    DmcDefinitionSet<Concept>                  ConceptDefs                 = new DmcDefinitionSet<Concept>("ConcinnityModule-ConceptDefs");                     // All Concept definitions
     DmcDefinitionSet<ConcinnityModule>         ConcinnityModuleDefs        = new DmcDefinitionSet<ConcinnityModule>("ConcinnityModule-ConcinnityModuleDefs");   // All ConcinnityModule definitions
 
     // Generated from: org.dmd.dmg.generators.BaseDMWGenerator.dumpWrapper(BaseDMWGenerator.java:558)
@@ -570,6 +572,24 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
 
     public Iterator<ConcinnityDefinition> getAllConcinnityDefinition(){
         return(ConcinnityDefinitionDefs.values().iterator());
+    }
+
+    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:254)
+    public void addConcept(Concept def){
+        ConceptDefs.add(def);
+        addConcinnityDefinition(def);
+    }
+
+    public int getConceptCount(){
+        return(ConceptDefs.size());
+    }
+
+    public Concept getConcept(DotName name){
+        return(ConceptDefs.getDefinition(name));
+    }
+
+    public Iterator<Concept> getAllConcept(){
+        return(ConceptDefs.values().iterator());
     }
 
     // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:221)
