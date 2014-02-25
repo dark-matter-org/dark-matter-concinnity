@@ -7,7 +7,7 @@ import org.dmd.concinnity.server.extended.Concept;                            //
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;               // Derived class - (BaseDMWGenerator.java:1248)
 import org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW;            // For multi-valued Concept - (BaseDMWGenerator.java:1709)
 import org.dmd.concinnity.shared.generated.dmo.ConceptDMO;                    // Class not auxiliary or abstract - (BaseDMWGenerator.java:1252)
-import org.dmd.concinnity.shared.generated.dmo.DmconcinnityDMSAG;             // Attribute isA from the dmconcinnity schema - (BaseDMWGenerator.java:897)
+import org.dmd.concinnity.shared.generated.dmo.DmconcinnityDMSAG;             // Attribute isLike from the dmconcinnity schema - (BaseDMWGenerator.java:897)
 import org.dmd.concinnity.shared.generated.types.ConceptREF;                  // Is reference type REF - (BaseDMWGenerator.java:1115)
 import org.dmd.concinnity.shared.generated.types.ConcinnityModuleREF;         // Required to access defined in module name - (DMWGenerator.java:180)
 import org.dmd.dmc.*;                                                         // If any attributes - (BaseDMWGenerator.java:1087)
@@ -96,8 +96,8 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
      * @return A Concept object.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1434)
-    public Concept getDerivedFrom(){
-        ConceptREF ref = ((ConceptDMO) core).getDerivedFrom();
+    public Concept getIs(){
+        ConceptREF ref = ((ConceptDMO) core).getIs();
         if (ref == null)
             return(null);
         
@@ -108,45 +108,45 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
     }
 
     /**
-     * Sets the derivedFrom to the specified value.
+     * Sets the is to the specified value.
      * @param value A value compatible with ConceptREF
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1519)
-    public void setDerivedFrom(Concept value) {
-        ((ConceptDMO) core).setDerivedFrom(value.getDMO());
+    public void setIs(Concept value) {
+        ((ConceptDMO) core).setIs(value.getDMO());
     }
 
     /**
-     * Sets the derivedFrom to the specified value.
+     * Sets the is to the specified value.
      * @param value A value compatible with ConceptREF
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1528)
-    public void setDerivedFrom(Object value) throws DmcValueException {
-        ((ConceptDMO) core).setDerivedFrom(value);
+    public void setIs(Object value) throws DmcValueException {
+        ((ConceptDMO) core).setIs(value);
     }
 
     /**
-     * Removes the derivedFrom attribute value.
+     * Removes the is attribute value.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1619)
-    public void remDerivedFrom(){
-        ((ConceptDMO) core).remDerivedFrom();
+    public void remIs(){
+        ((ConceptDMO) core).remIs();
     }
 
     /**
      * @return The number of Concept items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1671)
-    public int getIsASize(){
-        return(((ConceptDMO) core).getIsASize());
+    public int getIsLikeSize(){
+        return(((ConceptDMO) core).getIsLikeSize());
     }
 
     /**
      * @return true if there are no ConceptDMO items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1679)
-    public boolean getIsAIsEmpty(){
-        if (((ConceptDMO) core).getIsASize() == 0)
+    public boolean getIsLikeIsEmpty(){
+        if (((ConceptDMO) core).getIsLikeSize() == 0)
             return(true);
         return(false);
     }
@@ -155,8 +155,8 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
      * @return true if there are any ConceptDMO items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1689)
-    public boolean getIsAHasValue(){
-        if (((ConceptDMO) core).getIsASize() == 0)
+    public boolean getIsLikeHasValue(){
+        if (((ConceptDMO) core).getIsLikeSize() == 0)
             return(false);
         return(true);
     }
@@ -165,45 +165,45 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
      * @return An Iterator of ConceptDMO objects.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1716)
-    public ConceptIterableDMW getIsAIterable(){
-        DmcAttribute<?> attr = core.get(DmconcinnityDMSAG.__isA);
+    public ConceptIterableDMW getIsLikeIterable(){
+        DmcAttribute<?> attr = core.get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
             return(ConceptIterableDMW.emptyList);
         
-        return(new ConceptIterableDMW(((ConceptDMO) core).getIsA()));
+        return(new ConceptIterableDMW(((ConceptDMO) core).getIsLike()));
     }
 
     /**
-     * Adds another isA value.
+     * Adds another isLike value.
      * @param value A value compatible with Concept
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1773)
-    public DmcAttribute<?> addIsA(Concept value){
-        DmcAttribute<?> attr = ((ConceptDMO) core).addIsA(((ConceptDMO)value.getDmcObject()));
+    public DmcAttribute<?> addIsLike(Concept value){
+        DmcAttribute<?> attr = ((ConceptDMO) core).addIsLike(((ConceptDMO)value.getDmcObject()));
         return(attr);
     }
 
     /**
-     * Deletes a isA value.
+     * Deletes a isLike value.
      * @param value The Concept to be deleted from set of attribute values.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1823)
-    public void delIsA(Concept value){
-        ((ConceptDMO) core).delIsA(value.getDMO());
+    public void delIsLike(Concept value){
+        ((ConceptDMO) core).delIsLike(value.getDMO());
     }
 
     /**
      * @return A COPY of the collection of Concept objects.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1887)
-    public ArrayList<Concept> getIsACopy(){
-        DmcAttribute<?> attr = ((ConceptDMO) core).get(DmconcinnityDMSAG.__isA);
+    public ArrayList<Concept> getIsLikeCopy(){
+        DmcAttribute<?> attr = ((ConceptDMO) core).get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
             return(new ArrayList<Concept>());
         
         ArrayList<Concept> rc = new ArrayList<Concept>(attr.getMVSize());
         
-        ConceptIterableDMW it = getIsAIterable();
+        ConceptIterableDMW it = getIsLikeIterable();
         while(it.hasNext()){
             rc.add(it.next());
         }
@@ -212,11 +212,97 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
     }
 
     /**
-     * Removes the isA attribute value.
+     * Removes the isLike attribute value.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2292)
-    public void remIsA(){
-        ((ConceptDMO) core).remIsA();
+    public void remIsLike(){
+        ((ConceptDMO) core).remIsLike();
+    }
+
+    /**
+     * @return The number of Concept items.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1671)
+    public int getIsRelatedToSize(){
+        return(((ConceptDMO) core).getIsRelatedToSize());
+    }
+
+    /**
+     * @return true if there are no ConceptDMO items.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1679)
+    public boolean getIsRelatedToIsEmpty(){
+        if (((ConceptDMO) core).getIsRelatedToSize() == 0)
+            return(true);
+        return(false);
+    }
+
+    /**
+     * @return true if there are any ConceptDMO items.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1689)
+    public boolean getIsRelatedToHasValue(){
+        if (((ConceptDMO) core).getIsRelatedToSize() == 0)
+            return(false);
+        return(true);
+    }
+
+    /**
+     * @return An Iterator of ConceptDMO objects.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1716)
+    public ConceptIterableDMW getIsRelatedToIterable(){
+        DmcAttribute<?> attr = core.get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            return(ConceptIterableDMW.emptyList);
+        
+        return(new ConceptIterableDMW(((ConceptDMO) core).getIsRelatedTo()));
+    }
+
+    /**
+     * Adds another isRelatedTo value.
+     * @param value A value compatible with Concept
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1773)
+    public DmcAttribute<?> addIsRelatedTo(Concept value){
+        DmcAttribute<?> attr = ((ConceptDMO) core).addIsRelatedTo(((ConceptDMO)value.getDmcObject()));
+        return(attr);
+    }
+
+    /**
+     * Deletes a isRelatedTo value.
+     * @param value The Concept to be deleted from set of attribute values.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1823)
+    public void delIsRelatedTo(Concept value){
+        ((ConceptDMO) core).delIsRelatedTo(value.getDMO());
+    }
+
+    /**
+     * @return A COPY of the collection of Concept objects.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1887)
+    public ArrayList<Concept> getIsRelatedToCopy(){
+        DmcAttribute<?> attr = ((ConceptDMO) core).get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            return(new ArrayList<Concept>());
+        
+        ArrayList<Concept> rc = new ArrayList<Concept>(attr.getMVSize());
+        
+        ConceptIterableDMW it = getIsRelatedToIterable();
+        while(it.hasNext()){
+            rc.add(it.next());
+        }
+        
+        return(rc);
+    }
+
+    /**
+     * Removes the isRelatedTo attribute value.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2292)
+    public void remIsRelatedTo(){
+        ((ConceptDMO) core).remIsRelatedTo();
     }
 
     // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1474)
@@ -251,89 +337,44 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
     }
 
     /**
-     * @return The number of Concept items.
+     * @return A Concept object.
      */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1671)
-    public int getRelatedToSize(){
-        return(((ConceptDMO) core).getRelatedToSize());
-    }
-
-    /**
-     * @return true if there are no ConceptDMO items.
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1679)
-    public boolean getRelatedToIsEmpty(){
-        if (((ConceptDMO) core).getRelatedToSize() == 0)
-            return(true);
-        return(false);
-    }
-
-    /**
-     * @return true if there are any ConceptDMO items.
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1689)
-    public boolean getRelatedToHasValue(){
-        if (((ConceptDMO) core).getRelatedToSize() == 0)
-            return(false);
-        return(true);
-    }
-
-    /**
-     * @return An Iterator of ConceptDMO objects.
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1716)
-    public ConceptIterableDMW getRelatedToIterable(){
-        DmcAttribute<?> attr = core.get(DmconcinnityDMSAG.__relatedTo);
-        if (attr == null)
-            return(ConceptIterableDMW.emptyList);
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1434)
+    public Concept getRepresents(){
+        ConceptREF ref = ((ConceptDMO) core).getRepresents();
+        if (ref == null)
+            return(null);
         
-        return(new ConceptIterableDMW(((ConceptDMO) core).getRelatedTo()));
-    }
-
-    /**
-     * Adds another relatedTo value.
-     * @param value A value compatible with Concept
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1773)
-    public DmcAttribute<?> addRelatedTo(Concept value){
-        DmcAttribute<?> attr = ((ConceptDMO) core).addRelatedTo(((ConceptDMO)value.getDmcObject()));
-        return(attr);
-    }
-
-    /**
-     * Deletes a relatedTo value.
-     * @param value The Concept to be deleted from set of attribute values.
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1823)
-    public void delRelatedTo(Concept value){
-        ((ConceptDMO) core).delRelatedTo(value.getDMO());
-    }
-
-    /**
-     * @return A COPY of the collection of Concept objects.
-     */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1887)
-    public ArrayList<Concept> getRelatedToCopy(){
-        DmcAttribute<?> attr = ((ConceptDMO) core).get(DmconcinnityDMSAG.__relatedTo);
-        if (attr == null)
-            return(new ArrayList<Concept>());
+        if (ref.getObject() == null)
+            return(null);
         
-        ArrayList<Concept> rc = new ArrayList<Concept>(attr.getMVSize());
-        
-        ConceptIterableDMW it = getRelatedToIterable();
-        while(it.hasNext()){
-            rc.add(it.next());
-        }
-        
-        return(rc);
+        return((Concept)ref.getObject().getContainer());
     }
 
     /**
-     * Removes the relatedTo attribute value.
+     * Sets the represents to the specified value.
+     * @param value A value compatible with ConceptREF
      */
-    // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2292)
-    public void remRelatedTo(){
-        ((ConceptDMO) core).remRelatedTo();
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1519)
+    public void setRepresents(Concept value) {
+        ((ConceptDMO) core).setRepresents(value.getDMO());
+    }
+
+    /**
+     * Sets the represents to the specified value.
+     * @param value A value compatible with ConceptREF
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1528)
+    public void setRepresents(Object value) throws DmcValueException {
+        ((ConceptDMO) core).setRepresents(value);
+    }
+
+    /**
+     * Removes the represents attribute value.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1619)
+    public void remRepresents(){
+        ((ConceptDMO) core).remRepresents();
     }
 
     // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:221)

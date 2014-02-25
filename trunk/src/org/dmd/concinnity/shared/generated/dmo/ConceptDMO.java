@@ -123,116 +123,9 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
         return(objn.hashCode());
     }
 
-    /**
-     * @return An Iterator of ConceptDMO objects.
-     */
-    @SuppressWarnings("unchecked")
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:970)
-    public Iterator<ConceptREF> getIsA(){
-        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isA);
-        if (attr == null)
-            return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
-
-        if (DmcOmni.instance().lazyResolution()){
-            if (attr.doLazyResolution(this)){
-                rem(attr.getAttributeInfo());
-                return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
-            }
-        }
-
-        return(attr.getMV());
-    }
-
-    /**
-     * @return An Iterator of ConceptREFs without attempting lazy resolution (if it's turned on).
-     */
-    @SuppressWarnings("unchecked")
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:990)
-    public Iterator<ConceptREF> getIsAREFs(){
-        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isA);
-        if (attr == null)
-            return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
-
-        return(attr.getMV());
-    }
-
-    /**
-     * Adds another isA to the specified value.
-     * @param value Concept
-     */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1004)
-    public DmcAttribute<?> addIsA(ConceptDMO value) {
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isA);
-        if (attr == null)
-            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isA);
-        
-        try{
-            setLastValue(attr.add(value));
-            add(DmconcinnityDMSAG.__isA,attr);
-        }
-        catch(DmcValueException ex){
-            throw(new IllegalStateException("The type specific add() method shouldn't throw exceptions!",ex));
-        }
-        return(attr);
-    }
-
-    /**
-     * Adds another isA value.
-     * @param value A value compatible with Concept
-     */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1245)
-    public DmcAttribute<?> addIsA(Object value) throws DmcValueException {
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isA);
-        if (attr == null)
-            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isA);
-        
-        setLastValue(attr.add(value));
-        add(DmconcinnityDMSAG.__isA,attr);
-        return(attr);
-    }
-
-    /**
-     * Returns the number of values in isA
-     */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1262)
-    public int getIsASize(){
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isA);
-        if (attr == null){
-            if (DmconcinnityDMSAG.__isA.indexSize == 0)
-                return(0);
-            else
-                return(DmconcinnityDMSAG.__isA.indexSize);
-        }
-        return(attr.getMVSize());
-    }
-
-    /**
-     * Deletes a isA value.
-     * @param value The Concept to be deleted from set of attribute values.
-     */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1301)
-    public DmcAttribute<?> delIsA(Object value){
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isA);
-        
-        if ( (attr == null) && (getModifier()!= null))
-            delFromEmptyAttribute(new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isA), value);
-        else
-            attr = del(DmconcinnityDMSAG.__isA, value);
-        
-        return(attr);
-    }
-
-    /**
-     * Removes the isA attribute value.
-     */
-    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1355)
-    public void remIsA(){
-         rem(DmconcinnityDMSAG.__isA);
-    }
-
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:655)
-    public ConceptREF getDerivedFrom(){
-        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__derivedFrom);
+    public ConceptREF getIs(){
+        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__is);
         if (attr == null)
             return(null);
 
@@ -249,8 +142,8 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     /**
      * Returns the reference to Concept without attempting lazy resolution (if turned on).
      */
-    public ConceptREF getDerivedFromREF(){
-        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__derivedFrom);
+    public ConceptREF getIsREF(){
+        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__is);
         if (attr == null)
             return(null);
 
@@ -258,20 +151,20 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     }
 
     /**
-     * Sets derivedFrom to the specified value.
+     * Sets is to the specified value.
      * @param value ConceptDMO
      */
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:709)
-    public void setDerivedFrom(ConceptDMO value) {
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__derivedFrom);
+    public void setIs(ConceptDMO value) {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__is);
         if (attr == null)
-            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__derivedFrom);
+            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__is);
         else
             ((DmcTypeConceptREFSV)attr).removeBackReferences();
         
         try{
             attr.set(value);
-            set(DmconcinnityDMSAG.__derivedFrom,attr);
+            set(DmconcinnityDMSAG.__is,attr);
         }
         catch(DmcValueException ex){
             throw(new IllegalStateException("The type specific set() method shouldn't throw exceptions!",ex));
@@ -279,27 +172,27 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     }
 
     /**
-     * Sets derivedFrom to the specified value.
+     * Sets is to the specified value.
      * @param value A value compatible with DmcTypeConceptREFSV
      */
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:877)
-    public void setDerivedFrom(Object value) throws DmcValueException {
-        DmcTypeConceptREFSV attr  = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__derivedFrom);
+    public void setIs(Object value) throws DmcValueException {
+        DmcTypeConceptREFSV attr  = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__is);
         if (attr == null)
-            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__derivedFrom);
+            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__is);
         else
             attr.removeBackReferences();
         
         attr.set(value);
-        set(DmconcinnityDMSAG.__derivedFrom,attr);
+        set(DmconcinnityDMSAG.__is,attr);
     }
 
     /**
-     * Removes the derivedFrom attribute value.
+     * Removes the is attribute value.
      */
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:897)
-    public void remDerivedFrom(){
-         rem(DmconcinnityDMSAG.__derivedFrom);
+    public void remIs(){
+         rem(DmconcinnityDMSAG.__is);
     }
 
     /**
@@ -307,8 +200,8 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
      */
     @SuppressWarnings("unchecked")
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:970)
-    public Iterator<ConceptREF> getRelatedTo(){
-        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__relatedTo);
+    public Iterator<ConceptREF> getIsLike(){
+        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
             return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
 
@@ -327,8 +220,8 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
      */
     @SuppressWarnings("unchecked")
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:990)
-    public Iterator<ConceptREF> getRelatedToREFs(){
-        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__relatedTo);
+    public Iterator<ConceptREF> getIsLikeREFs(){
+        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
             return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
 
@@ -336,18 +229,18 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     }
 
     /**
-     * Adds another relatedTo to the specified value.
+     * Adds another isLike to the specified value.
      * @param value Concept
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1004)
-    public DmcAttribute<?> addRelatedTo(ConceptDMO value) {
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__relatedTo);
+    public DmcAttribute<?> addIsLike(ConceptDMO value) {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
-            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__relatedTo);
+            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isLike);
         
         try{
             setLastValue(attr.add(value));
-            add(DmconcinnityDMSAG.__relatedTo,attr);
+            add(DmconcinnityDMSAG.__isLike,attr);
         }
         catch(DmcValueException ex){
             throw(new IllegalStateException("The type specific add() method shouldn't throw exceptions!",ex));
@@ -356,57 +249,236 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     }
 
     /**
-     * Adds another relatedTo value.
+     * Adds another isLike value.
      * @param value A value compatible with Concept
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1245)
-    public DmcAttribute<?> addRelatedTo(Object value) throws DmcValueException {
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__relatedTo);
+    public DmcAttribute<?> addIsLike(Object value) throws DmcValueException {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isLike);
         if (attr == null)
-            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__relatedTo);
+            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isLike);
         
         setLastValue(attr.add(value));
-        add(DmconcinnityDMSAG.__relatedTo,attr);
+        add(DmconcinnityDMSAG.__isLike,attr);
         return(attr);
     }
 
     /**
-     * Returns the number of values in relatedTo
+     * Returns the number of values in isLike
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1262)
-    public int getRelatedToSize(){
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__relatedTo);
+    public int getIsLikeSize(){
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isLike);
         if (attr == null){
-            if (DmconcinnityDMSAG.__relatedTo.indexSize == 0)
+            if (DmconcinnityDMSAG.__isLike.indexSize == 0)
                 return(0);
             else
-                return(DmconcinnityDMSAG.__relatedTo.indexSize);
+                return(DmconcinnityDMSAG.__isLike.indexSize);
         }
         return(attr.getMVSize());
     }
 
     /**
-     * Deletes a relatedTo value.
+     * Deletes a isLike value.
      * @param value The Concept to be deleted from set of attribute values.
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1301)
-    public DmcAttribute<?> delRelatedTo(Object value){
-        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__relatedTo);
+    public DmcAttribute<?> delIsLike(Object value){
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isLike);
         
         if ( (attr == null) && (getModifier()!= null))
-            delFromEmptyAttribute(new DmcTypeConceptREFMV(DmconcinnityDMSAG.__relatedTo), value);
+            delFromEmptyAttribute(new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isLike), value);
         else
-            attr = del(DmconcinnityDMSAG.__relatedTo, value);
+            attr = del(DmconcinnityDMSAG.__isLike, value);
         
         return(attr);
     }
 
     /**
-     * Removes the relatedTo attribute value.
+     * Removes the isLike attribute value.
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1355)
-    public void remRelatedTo(){
-         rem(DmconcinnityDMSAG.__relatedTo);
+    public void remIsLike(){
+         rem(DmconcinnityDMSAG.__isLike);
+    }
+
+    /**
+     * @return An Iterator of ConceptDMO objects.
+     */
+    @SuppressWarnings("unchecked")
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:970)
+    public Iterator<ConceptREF> getIsRelatedTo(){
+        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
+
+        if (DmcOmni.instance().lazyResolution()){
+            if (attr.doLazyResolution(this)){
+                rem(attr.getAttributeInfo());
+                return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
+            }
+        }
+
+        return(attr.getMV());
+    }
+
+    /**
+     * @return An Iterator of ConceptREFs without attempting lazy resolution (if it's turned on).
+     */
+    @SuppressWarnings("unchecked")
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:990)
+    public Iterator<ConceptREF> getIsRelatedToREFs(){
+        DmcTypeConceptREFMV attr = (DmcTypeConceptREFMV) get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            return( ((List<ConceptREF>) Collections.EMPTY_LIST).iterator() );
+
+        return(attr.getMV());
+    }
+
+    /**
+     * Adds another isRelatedTo to the specified value.
+     * @param value Concept
+     */
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1004)
+    public DmcAttribute<?> addIsRelatedTo(ConceptDMO value) {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isRelatedTo);
+        
+        try{
+            setLastValue(attr.add(value));
+            add(DmconcinnityDMSAG.__isRelatedTo,attr);
+        }
+        catch(DmcValueException ex){
+            throw(new IllegalStateException("The type specific add() method shouldn't throw exceptions!",ex));
+        }
+        return(attr);
+    }
+
+    /**
+     * Adds another isRelatedTo value.
+     * @param value A value compatible with Concept
+     */
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1245)
+    public DmcAttribute<?> addIsRelatedTo(Object value) throws DmcValueException {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null)
+            attr = new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isRelatedTo);
+        
+        setLastValue(attr.add(value));
+        add(DmconcinnityDMSAG.__isRelatedTo,attr);
+        return(attr);
+    }
+
+    /**
+     * Returns the number of values in isRelatedTo
+     */
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1262)
+    public int getIsRelatedToSize(){
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isRelatedTo);
+        if (attr == null){
+            if (DmconcinnityDMSAG.__isRelatedTo.indexSize == 0)
+                return(0);
+            else
+                return(DmconcinnityDMSAG.__isRelatedTo.indexSize);
+        }
+        return(attr.getMVSize());
+    }
+
+    /**
+     * Deletes a isRelatedTo value.
+     * @param value The Concept to be deleted from set of attribute values.
+     */
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1301)
+    public DmcAttribute<?> delIsRelatedTo(Object value){
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__isRelatedTo);
+        
+        if ( (attr == null) && (getModifier()!= null))
+            delFromEmptyAttribute(new DmcTypeConceptREFMV(DmconcinnityDMSAG.__isRelatedTo), value);
+        else
+            attr = del(DmconcinnityDMSAG.__isRelatedTo, value);
+        
+        return(attr);
+    }
+
+    /**
+     * Removes the isRelatedTo attribute value.
+     */
+    // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1355)
+    public void remIsRelatedTo(){
+         rem(DmconcinnityDMSAG.__isRelatedTo);
+    }
+
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:655)
+    public ConceptREF getRepresents(){
+        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__represents);
+        if (attr == null)
+            return(null);
+
+        if (DmcOmni.instance().lazyResolution()){
+            if (attr.doLazyResolution(this)){
+                rem(attr.getAttributeInfo());
+                return(null);
+            }
+        }
+
+        return(attr.getSV());
+    }
+
+    /**
+     * Returns the reference to Concept without attempting lazy resolution (if turned on).
+     */
+    public ConceptREF getRepresentsREF(){
+        DmcTypeConceptREFSV attr = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__represents);
+        if (attr == null)
+            return(null);
+
+        return(attr.getSV());
+    }
+
+    /**
+     * Sets represents to the specified value.
+     * @param value ConceptDMO
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:709)
+    public void setRepresents(ConceptDMO value) {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__represents);
+        if (attr == null)
+            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__represents);
+        else
+            ((DmcTypeConceptREFSV)attr).removeBackReferences();
+        
+        try{
+            attr.set(value);
+            set(DmconcinnityDMSAG.__represents,attr);
+        }
+        catch(DmcValueException ex){
+            throw(new IllegalStateException("The type specific set() method shouldn't throw exceptions!",ex));
+        }
+    }
+
+    /**
+     * Sets represents to the specified value.
+     * @param value A value compatible with DmcTypeConceptREFSV
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:877)
+    public void setRepresents(Object value) throws DmcValueException {
+        DmcTypeConceptREFSV attr  = (DmcTypeConceptREFSV) get(DmconcinnityDMSAG.__represents);
+        if (attr == null)
+            attr = new DmcTypeConceptREFSV(DmconcinnityDMSAG.__represents);
+        else
+            attr.removeBackReferences();
+        
+        attr.set(value);
+        set(DmconcinnityDMSAG.__represents,attr);
+    }
+
+    /**
+     * Removes the represents attribute value.
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:897)
+    public void remRepresents(){
+         rem(DmconcinnityDMSAG.__represents);
     }
 
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:784)

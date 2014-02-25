@@ -20,9 +20,10 @@ useWrapperType	EXTENDED
 derivedFrom		ConcinnityDefinition
 isNamedBy		name
 must			name
-may				isA
-may				basedOn
-may				relatedTo
+may				is
+may				isLike
+may				isRelatedTo
+may				represents
 //nvp				garbage		"This is just garbage"
 //nvp				garbage		"And this is more garbage"
 //nvp				someValue	5
