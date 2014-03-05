@@ -203,9 +203,9 @@ public class ConcinnityModuleParser implements DsdParserInterface, DmcUncheckedO
     }
     // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.writeLoadSchemasFunction(DSDArtifactFormatter.java:658)
     void loadSchemas(ConcinnityModule module) throws ResultException {
-    	   Class<?> schemaClass = null;
-    	   SchemaDefinition sd	= null;
-    	   Iterator<String> it = module.getDMO().getLoadSchemaClass();
+        Class<?> schemaClass = null;
+        SchemaDefinition sd	= null;
+        Iterator<String> it = module.getDMO().getLoadSchemaClass();
         while(it.hasNext()){
 		       String cn = it.next();
 		       try {
