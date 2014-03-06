@@ -74,3 +74,16 @@ description		Indicates that a Concept is direct child of some parent Concept. Fo
  description A game that requires the player to solve puzzles of some sort.
  </pre>
 
+AttributeDefinition
+name		hint
+dmdID		8
+type		String
+description A brief explanation of a Concept, suitable for use in summaries etc.
+ Limited to 80 characters.
+
+ValueLengthRuleData
+ruleName         concinnityHintLength
+ruleTitle        The hint for a Concept should be at most 80 characters.
+applyToAttribute hint
+maxLength        80
+
