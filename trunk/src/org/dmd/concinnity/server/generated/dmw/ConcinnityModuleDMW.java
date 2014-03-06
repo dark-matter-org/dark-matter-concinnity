@@ -19,8 +19,10 @@ import org.dmd.dmc.types.DefinitionName;                                        
 import org.dmd.dmc.types.DotName;                                                       // To support the find method for definitions - (DSDefinitionModule.java:163)
 import org.dmd.dms.ClassDefinition;                                                     // Passing derived class def up the hierarchy - (BaseDMWGenerator.java:1067)
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                             // Attribute defFiles from the meta schema - (BaseDMWGenerator.java:897)
+import org.dmd.dms.generated.dmw.SchemaAndReasonIterableDMW;                            // For multi-valued SchemaAndReason - (BaseDMWGenerator.java:2103)
 import org.dmd.dms.generated.dmw.StringIterableDMW;                                     // For multi-valued String - (BaseDMWGenerator.java:2103)
 import org.dmd.dms.generated.types.DmcTypeModifierMV;                                   // Required for MODREC constructor - (BaseDMWGenerator.java:1071)
+import org.dmd.dms.generated.types.SchemaAndReason;                                     // Primitive type - (BaseDMWGenerator.java:1150)
 
 
 
@@ -410,7 +412,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
     }
 
     /**
-     * @return The number of String items.
+     * @return The number of SchemaAndReason items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1671)
     public int getLoadSchemaClassSize(){
@@ -418,7 +420,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
     }
 
     /**
-     * @return true if there are no StringDMO items.
+     * @return true if there are no SchemaAndReasonDMO items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1679)
     public boolean getLoadSchemaClassIsEmpty(){
@@ -428,7 +430,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
     }
 
     /**
-     * @return true if there are any StringDMO items.
+     * @return true if there are any SchemaAndReasonDMO items.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:1689)
     public boolean getLoadSchemaClassHasValue(){
@@ -438,20 +440,20 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
     }
 
     /**
-     * @return An Iterator of String objects.
+     * @return An Iterator of SchemaAndReason objects.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2107)
-    public StringIterableDMW getLoadSchemaClassIterable(){
+    public SchemaAndReasonIterableDMW getLoadSchemaClassIterable(){
         DmcAttribute<?> attr = core.get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
-            return(StringIterableDMW.emptyList);
+            return(SchemaAndReasonIterableDMW.emptyList);
         
-        return(new StringIterableDMW(((ConcinnityModuleDMO) core).getLoadSchemaClass()));
+        return(new SchemaAndReasonIterableDMW(((ConcinnityModuleDMO) core).getLoadSchemaClass()));
     }
 
     /**
      * Adds another loadSchemaClass value.
-     * @param value A value compatible with String
+     * @param value A value compatible with SchemaAndReason
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2133)
     public void addLoadSchemaClass(Object value) throws DmcValueException {
@@ -460,35 +462,35 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
 
     /**
      * Adds another loadSchemaClass value.
-     * @param value A value compatible with String
+     * @param value A value compatible with SchemaAndReason
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2143)
-    public void addLoadSchemaClass(String value){
+    public void addLoadSchemaClass(SchemaAndReason value){
         ((ConcinnityModuleDMO) core).addLoadSchemaClass(value);
     }
 
     /**
      * Returns true if the collection contains the loadSchemaClass value.
-     * @param value A value compatible with String
+     * @param value A value compatible with SchemaAndReason
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2200)
-    public boolean loadSchemaClassContains(String value){
+    public boolean loadSchemaClassContains(SchemaAndReason value){
         return(((ConcinnityModuleDMO) core).loadSchemaClassContains(value));
     }
 
     /**
-     * @return A COPY of the collection of String objects.
+     * @return A COPY of the collection of SchemaAndReason objects.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2244)
     @SuppressWarnings("unchecked")
-    public ArrayList<String> getLoadSchemaClassCopy(){
+    public ArrayList<SchemaAndReason> getLoadSchemaClassCopy(){
         DmcAttribute<?> attr = core.get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
-            return(new ArrayList<String>());
+            return(new ArrayList<SchemaAndReason>());
         
-        ArrayList<String> rc = new ArrayList<String>(attr.getMVSize());
+        ArrayList<SchemaAndReason> rc = new ArrayList<SchemaAndReason>(attr.getMVSize());
         
-        Iterator<String> it = (Iterator<String>) attr.getMV();
+        Iterator<SchemaAndReason> it = (Iterator<SchemaAndReason>) attr.getMV();
         while(it.hasNext()){
             rc.add(it.next());
         }
@@ -498,7 +500,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
 
     /**
      * Deletes a loadSchemaClass value.
-     * @param value The String to be deleted from set of attribute values.
+     * @param value The SchemaAndReason to be deleted from set of attribute values.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2271)
     public void delLoadSchemaClass(Object value) throws DmcValueException {
@@ -507,10 +509,10 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
 
     /**
      * Deletes a loadSchemaClass value.
-     * @param value The String to be deleted from set of attribute values.
+     * @param value The SchemaAndReason to be deleted from set of attribute values.
      */
     // org.dmd.dmg.generators.BaseDMWGenerator.formatMV(BaseDMWGenerator.java:2280)
-    public void delLoadSchemaClass(String value){
+    public void delLoadSchemaClass(SchemaAndReason value){
         ((ConcinnityModuleDMO) core).delLoadSchemaClass(value);
     }
 

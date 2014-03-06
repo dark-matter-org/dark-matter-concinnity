@@ -48,6 +48,7 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
     public static AttributeDefinition _isRelatedTo;
     public static AttributeDefinition _represents;
     public static AttributeDefinition _parent;
+    public static AttributeDefinition _hint;
 
 
 
@@ -62,6 +63,8 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
         generatedSchema = true;
         staticRefName   = "org.dmd.concinnity.server.generated.DmconcinnitySchemaAG";
 
+        dependsOnSchemaClasses.put("dmv","org.dmd.dmv.server.generated.DmvSchemaAG");
+
     }
 
     // Generated from: org.dmd.dmg.util.SchemaFormatter.dumpSchema(SchemaFormatter.java:208)
@@ -74,6 +77,11 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             me.setSchemaPackage("org.dmd.concinnity.shared");
             me.setDmwPackage("org.dmd.concinnity.server");
             me.setFile("/src/org/dmd/concinnity/shared/dmconfig/dmconcinnity.dms");
+
+
+            me.addDependsOn("dmv");
+            dependsOnSchemaClasses.put("dmv","org.dmd.dmv.server.generated.DmvSchemaAG");
+
 
             initClasses();
             initAttributes1();
@@ -119,7 +127,7 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _ConceptOBJ.setDmdID("-41997");
             _ConceptOBJ.setClassType("STRUCTURAL");
             _ConceptOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/classes.dmd");
-            _ConceptOBJ.setLineNumber("35");
+            _ConceptOBJ.setLineNumber("36");
             _ConceptOBJ.addDescription("The Concept class provides a flexible mechanism for defining concepts that can be\n linked in arbitrary or structured ways to other concepts. Concepts allow other, disparate information\n from other dark-matter Domain Specific Languages (DSLs) to be linked together at a conceptual level.\n <p/>\n How you use this mechanism is bounded only by your imagination.");
             _ConceptOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
             _ConceptOBJ.setIsNamedBy("meta.name");
@@ -130,6 +138,7 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _ConceptOBJ.addMay("dmconcinnity.isLike");
             _ConceptOBJ.addMay("dmconcinnity.isRelatedTo");
             _ConceptOBJ.addMay("dmconcinnity.represents");
+            _ConceptOBJ.addMay("dmconcinnity.hint");
             _ConceptOBJ.addMust("meta.name");
             _ConceptOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW");
             _ConceptOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
@@ -259,6 +268,19 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _parentOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
             _parentOBJ.setLineNumber("76");
             addAttributeDefList(_parent);
+
+// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
+            AttributeDefinitionDMO _hintOBJ = new AttributeDefinitionDMO();
+            _hint = new AttributeDefinition(_hintOBJ);
+            _hintOBJ.setType("meta.String");
+            _hintOBJ.setName("hint");
+            _hintOBJ.setDmdID("-41992");
+            _hintOBJ.addDescription("A brief explanation of a Concept, suitable for use in summaries etc.\n Limited to 80 characters.");
+            _hintOBJ.setDotName("dmconcinnity.hint.AttributeDefinition");
+            _hint.setDefinedIn(this);
+            _hintOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _hintOBJ.setLineNumber("83");
+            addAttributeDefList(_hint);
 
     }
 
