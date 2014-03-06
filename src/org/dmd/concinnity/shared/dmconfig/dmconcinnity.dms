@@ -2,6 +2,7 @@ SchemaDefinition
 name       			dmconcinnity
 schemaBaseID		-42000
 schemaIDRange		10
+dependsOn			dmv
 //defFiles			types.dmd
 //defFiles			complex.dmd
 defFiles    		attributes.dmd

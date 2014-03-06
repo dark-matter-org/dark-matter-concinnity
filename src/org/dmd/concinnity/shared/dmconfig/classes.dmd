@@ -24,6 +24,7 @@ may				is
 may				isLike
 may				isRelatedTo
 may				represents
+may				hint
 //nvp				garbage		"This is just garbage"
 //nvp				garbage		"And this is more garbage"
 //nvp				someValue	5
