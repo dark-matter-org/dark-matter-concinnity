@@ -92,6 +92,37 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
         return(false);
     }
 
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1474)
+    public String getHint(){
+        return(((ConceptDMO) core).getHint());
+    }
+
+    /**
+     * Sets hint to the specified value.
+     * @param value A value compatible with DmcTypeString
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1584)
+    public void setHint(Object value) throws DmcValueException {
+        ((ConceptDMO) core).setHint(value);
+    }
+
+    /**
+     * Sets hint to the specified value.
+     * @param value String
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1593)
+    public void setHint(String value){
+        ((ConceptDMO) core).setHint(value);
+    }
+
+    /**
+     * Removes the hint attribute value.
+     */
+    // org.dmd.dmg.generators.BaseDMWGenerator.formatSV(BaseDMWGenerator.java:1619)
+    public void remHint(){
+        ((ConceptDMO) core).remHint();
+    }
+
     /**
      * @return A Concept object.
      */

@@ -31,7 +31,9 @@ import org.dmd.dmc.types.DefinitionName;                                        
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                            // Required for MODREC constructor - (GenUtility.java:228)
 import org.dmd.dms.generated.types.DmcTypeDefinitionNameSV;                            // Required type - (GenUtility.java:328)
 import org.dmd.dms.generated.types.DmcTypeModifierMV;                                  // Required for MODREC constructor - (GenUtility.java:227)
+import org.dmd.dms.generated.types.DmcTypeSchemaAndReasonMV;                           // Required type - (GenUtility.java:328)
 import org.dmd.dms.generated.types.DmcTypeStringMV;                                    // Required type - (GenUtility.java:328)
+import org.dmd.dms.generated.types.SchemaAndReason;                                    // Primitive type and !auxiliary class - (GenUtility.java:271)
 
 // Generated from: org.dmd.dms.util.DmoFormatter.getClassHeader(DmoFormatter.java:677)
 /**
@@ -118,24 +120,24 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
     }
 
     /**
-     * @return An Iterator of String objects.
+     * @return An Iterator of SchemaAndReason objects.
      */
     @SuppressWarnings("unchecked")
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1112)
-    public Iterator<String> getLoadSchemaClass(){
-        DmcTypeStringMV attr = (DmcTypeStringMV) get(MetaDMSAG.__loadSchemaClass);
+    public Iterator<SchemaAndReason> getLoadSchemaClass(){
+        DmcTypeSchemaAndReasonMV attr = (DmcTypeSchemaAndReasonMV) get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
-            return( ((List<String>) Collections.EMPTY_LIST).iterator());
+            return( ((List<SchemaAndReason>) Collections.EMPTY_LIST).iterator());
 
         return(attr.getMV());
     }
 
     /**
-     * @return The nth String value.
+     * @return The nth SchemaAndReason value.
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1124)
-    public String getNthLoadSchemaClass(int i){
-        DmcTypeStringMV attr = (DmcTypeStringMV) get(MetaDMSAG.__loadSchemaClass);
+    public SchemaAndReason getNthLoadSchemaClass(int i){
+        DmcTypeSchemaAndReasonMV attr = (DmcTypeSchemaAndReasonMV) get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
             return(null);
 
@@ -144,13 +146,13 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
 
     /**
      * Adds another loadSchemaClass to the specified value.
-     * @param value String
+     * @param value SchemaAndReason
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1138)
-    public DmcAttribute<?> addLoadSchemaClass(String value) {
+    public DmcAttribute<?> addLoadSchemaClass(SchemaAndReason value) {
         DmcAttribute<?> attr = get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
-            attr = new DmcTypeStringMV(MetaDMSAG.__loadSchemaClass);
+            attr = new DmcTypeSchemaAndReasonMV(MetaDMSAG.__loadSchemaClass);
         
         try{
             setLastValue(attr.add(value));
@@ -163,11 +165,11 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
     }
 
     /**
-     * Returns true if we contain a valued keyed by the specified String.
-     * @param value String
+     * Returns true if we contain a valued keyed by the specified SchemaAndReason.
+     * @param value SchemaAndReason
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1213)
-    public boolean loadSchemaClassContains(String value) {
+    public boolean loadSchemaClassContains(SchemaAndReason value) {
         DmcAttribute<?> attr = get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
             return(false);
@@ -176,13 +178,13 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
 
     /**
      * Adds another loadSchemaClass value.
-     * @param value A value compatible with String
+     * @param value A value compatible with SchemaAndReason
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1245)
     public DmcAttribute<?> addLoadSchemaClass(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(MetaDMSAG.__loadSchemaClass);
         if (attr == null)
-            attr = new DmcTypeStringMV(MetaDMSAG.__loadSchemaClass);
+            attr = new DmcTypeSchemaAndReasonMV(MetaDMSAG.__loadSchemaClass);
         
         setLastValue(attr.add(value));
         add(MetaDMSAG.__loadSchemaClass,attr);
@@ -206,14 +208,14 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
 
     /**
      * Deletes a loadSchemaClass value.
-     * @param value The String to be deleted from set of attribute values.
+     * @param value The SchemaAndReason to be deleted from set of attribute values.
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1320)
     public DmcAttribute<?> delLoadSchemaClass(Object value) throws DmcValueException {
         DmcAttribute<?> attr = get(MetaDMSAG.__loadSchemaClass);
         
         if ( (attr == null) && (getModifier()!= null))
-            delFromEmptyAttribute(new DmcTypeStringMV(MetaDMSAG.__loadSchemaClass), value);
+            delFromEmptyAttribute(new DmcTypeSchemaAndReasonMV(MetaDMSAG.__loadSchemaClass), value);
         else
             attr = del(MetaDMSAG.__loadSchemaClass, value);
         
@@ -222,14 +224,14 @@ public class ConcinnityModuleDMO  extends ConcinnityDefinitionDMO  implements Dm
 
     /**
      * Deletes a loadSchemaClass from the specified value.
-     * @param value String
+     * @param value SchemaAndReason
      */
     // org.dmd.dms.util.GenUtility.formatMV(GenUtility.java:1336)
-    public DmcAttribute<?> delLoadSchemaClass(String value) {
+    public DmcAttribute<?> delLoadSchemaClass(SchemaAndReason value) {
         DmcAttribute<?> attr = get(MetaDMSAG.__loadSchemaClass);
         
         if ( (attr == null) && (getModifier()!= null))
-            delFromEmptyAttribute(new DmcTypeStringMV(MetaDMSAG.__loadSchemaClass), value);
+            delFromEmptyAttribute(new DmcTypeSchemaAndReasonMV(MetaDMSAG.__loadSchemaClass), value);
         else
             attr = del(MetaDMSAG.__loadSchemaClass, value);
         

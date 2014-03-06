@@ -32,6 +32,7 @@ import org.dmd.dmc.types.DefinitionName;                                        
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                     // Required for MODREC constructor - (GenUtility.java:228)
 import org.dmd.dms.generated.types.DmcTypeDefinitionNameSV;                     // Required type - (GenUtility.java:328)
 import org.dmd.dms.generated.types.DmcTypeModifierMV;                           // Required for MODREC constructor - (GenUtility.java:227)
+import org.dmd.dms.generated.types.DmcTypeStringSV;                             // Required type - (GenUtility.java:328)
 
 // Generated from: org.dmd.dms.util.DmoFormatter.getClassHeader(DmoFormatter.java:677)
 /**
@@ -479,6 +480,56 @@ public class ConceptDMO  extends ConcinnityDefinitionDMO  implements DmcNamedObj
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:897)
     public void remRepresents(){
          rem(DmconcinnityDMSAG.__represents);
+    }
+
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:784)
+    public String getHint(){
+        DmcTypeStringSV attr = (DmcTypeStringSV) get(DmconcinnityDMSAG.__hint);
+        if (attr == null)
+            return(null);
+
+        return(attr.getSV());
+    }
+
+    /**
+     * Sets hint to the specified value.
+     * @param value String
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:824)
+    public void setHint(String value) {
+        DmcAttribute<?> attr = get(DmconcinnityDMSAG.__hint);
+        if (attr == null)
+            attr = new DmcTypeStringSV(DmconcinnityDMSAG.__hint);
+        
+        try{
+            attr.set(value);
+            set(DmconcinnityDMSAG.__hint,attr);
+        }
+        catch(DmcValueException ex){
+            throw(new IllegalStateException("The type specific set() method shouldn't throw exceptions!",ex));
+        }
+    }
+
+    /**
+     * Sets hint to the specified value.
+     * @param value A value compatible with DmcTypeStringSV
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:877)
+    public void setHint(Object value) throws DmcValueException {
+        DmcTypeStringSV attr  = (DmcTypeStringSV) get(DmconcinnityDMSAG.__hint);
+        if (attr == null)
+            attr = new DmcTypeStringSV(DmconcinnityDMSAG.__hint);
+        
+        attr.set(value);
+        set(DmconcinnityDMSAG.__hint,attr);
+    }
+
+    /**
+     * Removes the hint attribute value.
+     */
+    // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:897)
+    public void remHint(){
+         rem(DmconcinnityDMSAG.__hint);
     }
 
     // org.dmd.dms.util.GenUtility.formatSV(GenUtility.java:784)
