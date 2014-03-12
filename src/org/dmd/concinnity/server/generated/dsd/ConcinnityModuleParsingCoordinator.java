@@ -121,13 +121,13 @@ public class ConcinnityModuleParsingCoordinator {
 
             generator.objectResolutionComplete(loaded, location, definitions);
 
-            if (!location.isFromJAR())
-                generator.generate(loaded,location,definitions);
-
         }
+
+        generator.generate(definitions);
+
     }
 
-    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:937)
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:930)
     ConcinnityModule loadConcinnityModuleModule(ConfigLocation location)  throws ResultException, DmcValueException, DmcRuleExceptionSet, DmcNameClashException {
         // If we've already loaded the file, skip it
         ConcinnityModuleInfo info = loadedConcinnityModuleConfigs.get(new DefinitionName(location.getConfigName()));
@@ -144,7 +144,16 @@ public class ConcinnityModuleParsingCoordinator {
         return(loaded);
     }
 
-    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:955)
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:947)
+    public ConfigLocation getLocation(ConcinnityModule module){
+        ConcinnityModuleInfo info = loadedConcinnityModuleConfigs.get(module.getName());
+        if (info == null)
+            throw(new IllegalStateException("Couldn't find ConfigLocation for module: \n\n" + module.toOIF()));
+
+        return(info.location);
+    }
+
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:958)
     void loadModuleDependencies(ModuleInfoBase mi) throws ResultException, DmcValueException, DmcRuleExceptionSet, DmcNameClashException {
 
         if (mi.dependenciesLoaded)
@@ -172,20 +181,20 @@ public class ConcinnityModuleParsingCoordinator {
 
     }
 
-    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:985)
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:988)
     void missingConfigError(String missing) throws ResultException {
         ResultException ex = new ResultException("Could not find config: " + missing);
         throw(ex);
     }
 
-    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:991)
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:994)
     void missingConfigError(DSDefinition module, String missing) throws ResultException {
         ResultException ex = new ResultException("Could not find config: " + missing);
         ex.setLocationInfo(module.getFile(), module.getLineNumber());
         throw(ex);
     }
 
-    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:999)
+    // Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateParsingCoordinator(DSDArtifactFormatter.java:1002)
     class ModuleInfoBase {
         ConfigLocation location;
         boolean        dependenciesLoaded;
