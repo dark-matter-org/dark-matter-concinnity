@@ -9,7 +9,7 @@ import org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW;            //
 import org.dmd.concinnity.shared.generated.dmo.ConceptDMO;                    // Class not auxiliary or abstract - (BaseDMWGenerator.java:1252)
 import org.dmd.concinnity.shared.generated.dmo.DmconcinnityDMSAG;             // Attribute isLike from the dmconcinnity schema - (BaseDMWGenerator.java:897)
 import org.dmd.concinnity.shared.generated.types.ConceptREF;                  // Is reference type REF - (BaseDMWGenerator.java:1115)
-import org.dmd.concinnity.shared.generated.types.ConcinnityModuleREF;         // Required to access defined in module name - (DMWGenerator.java:180)
+import org.dmd.concinnity.shared.generated.types.ConcinnityModuleREF;         // Required to access defined in module name - (DMWGenerator.java:181)
 import org.dmd.dmc.*;                                                         // If any attributes - (BaseDMWGenerator.java:1087)
 import org.dmd.dmc.definitions.DmcDefinitionIF;                               // The object is a domain specific definition - (BaseDMWGenerator.java:411)
 import org.dmd.dmc.types.DefinitionName;                                      // Is named by - (BaseDMWGenerator.java:1062)
@@ -408,7 +408,7 @@ abstract public class ConceptDMW extends ConcinnityDefinition implements DmcDefi
         ((ConceptDMO) core).remRepresents();
     }
 
-    // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:221)
+    // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:222)
     /**
      * This method indicates the name of the module from which this definition was loaded.
      */

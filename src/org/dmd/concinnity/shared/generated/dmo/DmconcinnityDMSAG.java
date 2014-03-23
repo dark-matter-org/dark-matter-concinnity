@@ -1,24 +1,24 @@
 package org.dmd.concinnity.shared.generated.dmo;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpHeaderDMSAG(DmoCompactSchemaFormatter.java:1079)
-import java.util.ArrayList;                                             // For storage of schema info - (DmoCompactSchemaFormatter.java:1013)
-import java.util.HashMap;                                               // For storage of schema info - (DmoCompactSchemaFormatter.java:1012)
-import java.util.Iterator;                                              // For access of schema info - (DmoCompactSchemaFormatter.java:1014)
-import org.dmd.dmc.*;                                                   // Basic DMC stuff - (DmoCompactSchemaFormatter.java:1015)
-import org.dmd.dmc.rules.RuleIF;                                        // For rule info - (DmoCompactSchemaFormatter.java:1016)
-import org.dmd.dms.generated.dmo.MetaDMSAG;                             // Required attribute from MetaDMSAG - (DmoCompactSchemaFormatter.java:1032)
-import org.dmd.dms.generated.enums.ClassTypeEnum;                       // Have class definitions - (DmoCompactSchemaFormatter.java:1020)
-import org.dmd.dms.generated.enums.DataTypeEnum;                        // Have class/attribute definitions - (DmoCompactSchemaFormatter.java:1021)
-import org.dmd.dms.generated.enums.OriginalTypeEnum;                    // Have type/internal type definitions - (DmoCompactSchemaFormatter.java:1026)
-import org.dmd.dms.generated.enums.ValueTypeEnum;                       // Have attribute definitions - (DmoCompactSchemaFormatter.java:1047)
-import org.dmd.dmv.shared.extended.rulesdmo.ValueLengthRule;            // To instantiate rules of this type - (DmoCompactSchemaFormatter.java:1073)
-import org.dmd.dmv.shared.generated.dmo.ValueLengthRuleDataDMO;         // To instantiate ValueLengthRuleData rule data - (DmoCompactSchemaFormatter.java:1072)
+// Called from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpHeaderDMSAG(DmoCompactSchemaFormatter.java:1080)
+import java.util.ArrayList;                                             // For storage of schema info - (DmoCompactSchemaFormatter.java:1014)
+import java.util.HashMap;                                               // For storage of schema info - (DmoCompactSchemaFormatter.java:1013)
+import java.util.Iterator;                                              // For access of schema info - (DmoCompactSchemaFormatter.java:1015)
+import org.dmd.dmc.*;                                                   // Basic DMC stuff - (DmoCompactSchemaFormatter.java:1016)
+import org.dmd.dmc.rules.RuleIF;                                        // For rule info - (DmoCompactSchemaFormatter.java:1017)
+import org.dmd.dms.generated.dmo.MetaDMSAG;                             // Required attribute from MetaDMSAG - (DmoCompactSchemaFormatter.java:1033)
+import org.dmd.dms.generated.enums.ClassTypeEnum;                       // Have class definitions - (DmoCompactSchemaFormatter.java:1021)
+import org.dmd.dms.generated.enums.DataTypeEnum;                        // Have class/attribute definitions - (DmoCompactSchemaFormatter.java:1022)
+import org.dmd.dms.generated.enums.OriginalTypeEnum;                    // Have type/internal type definitions - (DmoCompactSchemaFormatter.java:1027)
+import org.dmd.dms.generated.enums.ValueTypeEnum;                       // Have attribute definitions - (DmoCompactSchemaFormatter.java:1048)
+import org.dmd.dmv.shared.extended.rulesdmo.ValueLengthRule;            // To instantiate rules of this type - (DmoCompactSchemaFormatter.java:1074)
+import org.dmd.dmv.shared.generated.dmo.ValueLengthRuleDataDMO;         // To instantiate ValueLengthRuleData rule data - (DmoCompactSchemaFormatter.java:1073)
 
 
 
 
-// Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:137)
+// Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:138)
 public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
 
 
@@ -42,17 +42,17 @@ public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
     public final static DmcAttributeInfo __parent = new DmcAttributeInfo("dmconcinnity", "parent", -41993, "Concept", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, 0, false);
     public final static DmcAttributeInfo __represents = new DmcAttributeInfo("dmconcinnity", "represents", -41994, "Concept", ValueTypeEnum.SINGLE, DataTypeEnum.PERSISTENT, 0, false);
 
-    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:183)
+    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:184)
     public final static DmcTypeInfo __type_Concept = new DmcTypeInfo("Concept", OriginalTypeEnum.REFERENCE);
     public final static DmcTypeInfo __type_ConcinnityDefinition = new DmcTypeInfo("ConcinnityDefinition", OriginalTypeEnum.REFERENCE);
     public final static DmcTypeInfo __type_ConcinnityModule = new DmcTypeInfo("ConcinnityModule", OriginalTypeEnum.REFERENCE);
 
-    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:224)
+    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:225)
     public final static DmcClassInfo __ConcinnityDefinition = new DmcClassInfo("ConcinnityDefinition","org.dmd.concinnity.shared.generated.dmo.ConcinnityDefinitionDMO", -41998, ClassTypeEnum.ABSTRACT, DataTypeEnum.PERSISTENT,MetaDMSAG.__Concinnity,MetaDMSAG.__name);
     public final static DmcClassInfo __Concept = new DmcClassInfo("Concept","org.dmd.concinnity.shared.generated.dmo.ConceptDMO", -41997, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,__ConcinnityDefinition,MetaDMSAG.__name);
     public final static DmcClassInfo __ConcinnityModule = new DmcClassInfo("ConcinnityModule","org.dmd.concinnity.shared.generated.dmo.ConcinnityModuleDMO", -41999, ClassTypeEnum.STRUCTURAL, DataTypeEnum.PERSISTENT,__ConcinnityDefinition,MetaDMSAG.__name);
 
-    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:253)
+    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:254)
     public final static ValueLengthRule __concinnityHintLength;
 
     static  HashMap<Integer, DmcClassInfo> _CmAp;
@@ -90,7 +90,7 @@ public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
 
     }
 
-    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:307)
+    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:308)
     static {
 
 
@@ -113,11 +113,11 @@ public class DmconcinnityDMSAG implements DmcCompactSchemaIF {
 
     }
 
-    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:351)
+    // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:352)
     static {
 
 
-        // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:370)
+        // Generated from: org.dmd.dms.util.DmoCompactSchemaFormatter.dumpSchema(DmoCompactSchemaFormatter.java:371)
         try{
             ValueLengthRuleDataDMO _concinnityHintLengthData = new ValueLengthRuleDataDMO();
             _concinnityHintLengthData    .setRuleName("concinnityHintLength");
