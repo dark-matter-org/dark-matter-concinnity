@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Name: dark-matter-concinnity
+Specification-Title: dark-matter-concinnity
+Specification-Version: 1.0.0
+Specification-Vendor: dark-matter-concinnity committers
+Implementation-Title: org.dmd
+Implementation-Version: rev14
+Implementation-Vendor: dark-matter-concinnity committers
