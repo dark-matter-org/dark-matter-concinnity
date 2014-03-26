@@ -48,7 +48,6 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
     public static AttributeDefinition _isRelatedTo;
     public static AttributeDefinition _represents;
     public static AttributeDefinition _parent;
-    public static AttributeDefinition _hint;
 
 
 
@@ -138,7 +137,7 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _ConceptOBJ.addMay("dmconcinnity.isLike");
             _ConceptOBJ.addMay("dmconcinnity.isRelatedTo");
             _ConceptOBJ.addMay("dmconcinnity.represents");
-            _ConceptOBJ.addMay("dmconcinnity.hint");
+            _ConceptOBJ.addMay("meta.hint");
             _ConceptOBJ.addMust("meta.name");
             _ConceptOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW");
             _ConceptOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
@@ -268,19 +267,6 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             _parentOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
             _parentOBJ.setLineNumber("76");
             addAttributeDefList(_parent);
-
-// Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
-            AttributeDefinitionDMO _hintOBJ = new AttributeDefinitionDMO();
-            _hint = new AttributeDefinition(_hintOBJ);
-            _hintOBJ.setType("meta.String");
-            _hintOBJ.setName("hint");
-            _hintOBJ.setDmdID("-41992");
-            _hintOBJ.addDescription("A brief explanation of a Concept, suitable for use in summaries etc.\n Limited to 80 characters.");
-            _hintOBJ.setDotName("dmconcinnity.hint.AttributeDefinition");
-            _hint.setDefinedIn(this);
-            _hintOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
-            _hintOBJ.setLineNumber("83");
-            addAttributeDefList(_hint);
 
     }
 
