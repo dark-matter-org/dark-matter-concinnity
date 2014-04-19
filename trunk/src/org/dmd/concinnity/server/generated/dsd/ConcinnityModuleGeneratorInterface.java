@@ -16,15 +16,15 @@
 package org.dmd.concinnity.server.generated.dsd;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGeneratorInterface(DSDArtifactFormatter.java:1203)
-import java.io.IOException;                                                               // May occur during artifact generation - (DSDArtifactFormatter.java:1198)
-import org.dmd.concinnity.server.extended.ConcinnityModule;                               // The base module for generation - (DSDArtifactFormatter.java:1196)
-import org.dmd.concinnity.server.generated.dsd.ConcinnityModuleDefinitionManager;         // All parsed definition - (DSDArtifactFormatter.java:1201)
-import org.dmd.util.exceptions.ResultException;                                           // For problems found after parsing - (DSDArtifactFormatter.java:1200)
-import org.dmd.util.parsing.ConfigLocation;                                               // Where the config was loaded from - (DSDArtifactFormatter.java:1199)
+// Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGeneratorInterface(DSDArtifactFormatter.java:1208)
+import java.io.IOException;                                                               // May occur during artifact generation - (DSDArtifactFormatter.java:1203)
+import org.dmd.concinnity.server.extended.ConcinnityModule;                               // The base module for generation - (DSDArtifactFormatter.java:1201)
+import org.dmd.concinnity.server.generated.dsd.ConcinnityModuleDefinitionManager;         // All parsed definition - (DSDArtifactFormatter.java:1206)
+import org.dmd.util.exceptions.ResultException;                                           // For problems found after parsing - (DSDArtifactFormatter.java:1205)
+import org.dmd.util.parsing.ConfigLocation;                                               // Where the config was loaded from - (DSDArtifactFormatter.java:1204)
 
 
-// Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGeneratorInterface(DSDArtifactFormatter.java:1205)
+// Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGeneratorInterface(DSDArtifactFormatter.java:1210)
 public interface ConcinnityModuleGeneratorInterface {
 
     /**
