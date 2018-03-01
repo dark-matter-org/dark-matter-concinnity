@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
-    <jar path="/Users/peterstrong/Desktop/dark-matter JARs/dark-matter-concinnity.jar"/>
+    <jar path="/Users/peter/Desktop/dark-matter-jars/dark-matter-concinnity-1.0.1.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/dark-matter-concinnity/dark-matter-concinnity.jardesc" exportErrors="false" exportWarnings="false" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
@@ -11,8 +11,7 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
-        <file path="/dark-matter-concinnity/Manifest.txt"/>
-        <javaElement handleIdentifier="=dark-matter-concinnity/test"/>
         <javaElement handleIdentifier="=dark-matter-concinnity/src"/>
+        <file path="/dark-matter-concinnity/Manifest.txt"/>
     </selectedElements>
 </jardesc>
