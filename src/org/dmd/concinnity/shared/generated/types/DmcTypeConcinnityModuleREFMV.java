@@ -13,6 +13,21 @@
 //	You should have received a copy of the GNU Lesser General Public License along
 //	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
 //	---------------------------------------------------------------------------
+//	---------------------------------------------------------------------------
+//	dark-matter-data
+//	Copyright (c) 2014 dark-matter-data committers
+//	---------------------------------------------------------------------------
+//	This program is free software; you can redistribute it and/or modify it
+//	under the terms of the GNU Lesser General Public License as published by the
+//	Free Software Foundation; either version 3 of the License, or (at your
+//	option) any later version.
+//	This program is distributed in the hope that it will be useful, but WITHOUT
+//	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//	FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for
+//	more details.
+//	You should have received a copy of the GNU Lesser General Public License along
+//	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
+//	---------------------------------------------------------------------------
 package org.dmd.concinnity.shared.generated.types;
 
 import java.io.Serializable;
@@ -25,8 +40,8 @@ import org.dmd.dmc.DmcValueException;
  * The DmcTypeConcinnityModuleREFMV provides storage for a multi-valued ConcinnityModuleREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2329)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:531)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2341)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:529)
  */
 @SuppressWarnings("serial")
 public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF implements Serializable {
@@ -49,7 +64,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2360)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2372)
     public DmcAttribute<ConcinnityModuleREF> cloneIt(){
         synchronized(this){
             DmcTypeConcinnityModuleREFMV rc = getNew();
@@ -78,7 +93,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2393)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2405)
     public ConcinnityModuleREF add(Object v) throws DmcValueException {
         synchronized(this){
             ConcinnityModuleREF rc = typeCheck(v);
@@ -90,7 +105,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2406)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2418)
     public ConcinnityModuleREF del(Object v){
         synchronized(this){
             if (value == null)
@@ -114,7 +129,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2440)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2452)
     public Iterator<ConcinnityModuleREF> getMV(){
         synchronized(this){
             if (value == null)
@@ -125,7 +140,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2452)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2464)
     public ArrayList<ConcinnityModuleREF> getMVCopy(){
         synchronized(this){
             if (value == null)
@@ -136,7 +151,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2464)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2476)
     public int getMVSize(){
         synchronized(this){
             if (getAttributeInfo().indexSize == 0){
@@ -150,7 +165,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2479)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2491)
     public ConcinnityModuleREF getMVnth(int index){
         synchronized(this){
             if (value == null)
@@ -160,7 +175,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2490)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2502)
     public ConcinnityModuleREF setMVnth(int index, Object v) throws DmcValueException {
         synchronized(this){
             if (getAttributeInfo().indexSize == 0)
@@ -187,7 +202,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2518)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2530)
     public boolean hasValue(){
         synchronized(this){
             boolean rc = false;
@@ -210,7 +225,7 @@ public class DmcTypeConcinnityModuleREFMV extends DmcTypeConcinnityModuleREF imp
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2542)
+    // org.dmd.dms.util.GenUtility.dumpMVType(GenUtility.java:2554)
     public boolean contains(Object v){
         synchronized(this){
             if (value == null)

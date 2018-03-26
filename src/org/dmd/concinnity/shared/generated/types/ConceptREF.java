@@ -13,6 +13,21 @@
 //	You should have received a copy of the GNU Lesser General Public License along
 //	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
 //	---------------------------------------------------------------------------
+//	---------------------------------------------------------------------------
+//	dark-matter-data
+//	Copyright (c) 2014 dark-matter-data committers
+//	---------------------------------------------------------------------------
+//	This program is free software; you can redistribute it and/or modify it
+//	under the terms of the GNU Lesser General Public License as published by the
+//	Free Software Foundation; either version 3 of the License, or (at your
+//	option) any later version.
+//	This program is distributed in the hope that it will be useful, but WITHOUT
+//	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//	FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for
+//	more details.
+//	You should have received a copy of the GNU Lesser General Public License along
+//	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
+//	---------------------------------------------------------------------------
 package org.dmd.concinnity.shared.generated.types;
 
 import org.dmd.dmc.DmcAttribute;
@@ -91,7 +106,6 @@ public class ConceptREF extends DmcNamedObjectNontransportableREF<ConceptDMO> {
         myName.set(n);
     }
 
-    @Override
     public DmcObjectName getObjectName(){
         if (myName == null)
             throw(new IllegalStateException("You've tried to access the name of an object but the name attribute hasn't been set."));
@@ -106,7 +120,6 @@ public class ConceptREF extends DmcNamedObjectNontransportableREF<ConceptDMO> {
         return(myName.getSV());
     }
 
-    @Override
     public DmcAttribute<?> getObjectNameAttribute(){
         if (myName == null)
             throw(new IllegalStateException("You've tried to access the name of an object but the name attribute hasn't been set."));

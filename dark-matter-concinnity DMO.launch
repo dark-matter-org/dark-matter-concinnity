@@ -8,6 +8,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.dmd.dms.tools.dmogenerator.DmoGeneratorMain"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-concinnity/src dark-matter-concinnity/test dark-matter-data/src -jars dark-matter-data -autogen -targets dmconcinnity"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-workspace ${workspace_loc} -srcdir dark-matter-concinnity/src dark-matter-data/src -jars dark-matter-data -autogen -targets dmconcinnity"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="dark-matter-concinnity"/>
 </launchConfiguration>
