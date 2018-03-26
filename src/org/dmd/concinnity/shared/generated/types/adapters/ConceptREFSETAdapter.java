@@ -1,3 +1,18 @@
+//	---------------------------------------------------------------------------
+//	dark-matter-data
+//	Copyright (c) 2014 dark-matter-data committers
+//	---------------------------------------------------------------------------
+//	This program is free software; you can redistribute it and/or modify it
+//	under the terms of the GNU Lesser General Public License as published by the
+//	Free Software Foundation; either version 3 of the License, or (at your
+//	option) any later version.
+//	This program is distributed in the hope that it will be useful, but WITHOUT
+//	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//	FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for
+//	more details.
+//	You should have received a copy of the GNU Lesser General Public License along
+//	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
+//	---------------------------------------------------------------------------
 package org.dmd.concinnity.shared.generated.types.adapters;
 
 import org.dmd.dmc.presentation.DmcAdapterIF;
@@ -17,19 +32,16 @@ public class ConceptREFSETAdapter extends DmcTypeConceptREFSET implements DmcAda
     	   super(ai);
     }
 
-    @Override
     public void setEmpty(){
     	   value = null;
     }
 
-    @Override
     public boolean hasValue(){
     	   if (value == null)
     		   return(false);
     	   return(true);
     }
 
-    @Override
     public void resetToExisting() {
     	if (existingValue == null)
     		value = null;
@@ -37,29 +49,24 @@ public class ConceptREFSETAdapter extends DmcTypeConceptREFSET implements DmcAda
     		value = existingValue.getMVCopy();
     }
 
-    @Override
     public void setExisting(DmcAttribute<?> attr) {
     	existingValue = (DmcTypeConceptREFSET) attr;
     	if (existingValue != null)
     		value = existingValue.getMVCopy();
     }
 
-    @Override
     public boolean valueChanged(){
     	   return(valueChangedMV(existingValue, this));
     }
 
-    @Override
     public void addMods(DmcTypeModifierMV mods){
     	   addModsMV(mods, existingValue, this);
     }
 
-    @Override
     public DmcAttribute<?> getExisting() {
     	   return(existingValue);
     }
 
-    @Override
     public Object getValue() {
     	   return(value);
     }

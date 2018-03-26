@@ -13,6 +13,21 @@
 //	You should have received a copy of the GNU Lesser General Public License along
 //	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
 //	---------------------------------------------------------------------------
+//	---------------------------------------------------------------------------
+//	dark-matter-data
+//	Copyright (c) 2014 dark-matter-data committers
+//	---------------------------------------------------------------------------
+//	This program is free software; you can redistribute it and/or modify it
+//	under the terms of the GNU Lesser General Public License as published by the
+//	Free Software Foundation; either version 3 of the License, or (at your
+//	option) any later version.
+//	This program is distributed in the hope that it will be useful, but WITHOUT
+//	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//	FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for
+//	more details.
+//	You should have received a copy of the GNU Lesser General Public License along
+//	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
+//	---------------------------------------------------------------------------
 package org.dmd.concinnity.shared.generated.types;
 
 import java.io.Serializable;
@@ -30,8 +45,8 @@ import org.dmd.dmc.types.DefinitionName;    // key type import
  * The DmcTypeConcinnityDefinitionREFMAP provides storage for a map of ConcinnityDefinitionREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2858)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:540)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2870)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:538)
  */
 @SuppressWarnings("serial")
 // public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefinitionREF<ConcinnityDefinitionREF,DefinitionName> {
@@ -73,7 +88,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2915)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2927)
     public DmcAttribute<ConcinnityDefinitionREF> cloneIt(){
         synchronized(this){
             DmcTypeConcinnityDefinitionREFMAP rc = getNew();
@@ -92,7 +107,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2935)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2947)
     public ConcinnityDefinitionREF add(Object v) throws DmcValueException {
         synchronized(this){
             ConcinnityDefinitionREF newval = typeCheck(v);
@@ -112,7 +127,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2956)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2968)
     public ConcinnityDefinitionREF del(Object key){
         synchronized(this){
     
@@ -127,7 +142,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2972)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2984)
     public Iterator<ConcinnityDefinitionREF> getMV(){
         synchronized(this){
     
@@ -143,7 +158,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:2989)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3001)
     public Map<DefinitionName,ConcinnityDefinitionREF> getMVCopy(){
         synchronized(this){
             Map<DefinitionName,ConcinnityDefinitionREF> clone = null;
@@ -163,7 +178,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3010)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3022)
     @Override
     public int getMVSize(){
         synchronized(this){
@@ -174,7 +189,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3022)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3034)
     public ConcinnityDefinitionREF getByKey(Object key){
         synchronized(this){
            if (value == null)
@@ -188,7 +203,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3037)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3049)
     public boolean contains(Object v){
         synchronized(this){
            if (value == null)
@@ -204,7 +219,7 @@ public class DmcTypeConcinnityDefinitionREFMAP extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3054)
+    // org.dmd.dms.util.GenUtility.dumpMAPType(GenUtility.java:3066)
     public boolean containsKey(Object key){
         synchronized(this){
            if (value == null)

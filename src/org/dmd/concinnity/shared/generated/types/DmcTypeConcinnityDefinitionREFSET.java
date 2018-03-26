@@ -13,6 +13,21 @@
 //	You should have received a copy of the GNU Lesser General Public License along
 //	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
 //	---------------------------------------------------------------------------
+//	---------------------------------------------------------------------------
+//	dark-matter-data
+//	Copyright (c) 2014 dark-matter-data committers
+//	---------------------------------------------------------------------------
+//	This program is free software; you can redistribute it and/or modify it
+//	under the terms of the GNU Lesser General Public License as published by the
+//	Free Software Foundation; either version 3 of the License, or (at your
+//	option) any later version.
+//	This program is distributed in the hope that it will be useful, but WITHOUT
+//	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+//	FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for
+//	more details.
+//	You should have received a copy of the GNU Lesser General Public License along
+//	with this program; if not, see <http://www.gnu.org/licenses/lgpl.html>.
+//	---------------------------------------------------------------------------
 package org.dmd.concinnity.shared.generated.types;
 
 import java.io.Serializable;
@@ -28,8 +43,8 @@ import org.dmd.dms.generated.enums.ValueTypeEnum;
  * The DmcTypeConcinnityDefinitionREFSET provides storage for a set of ConcinnityDefinitionREF
  * <P>
  * This code was auto-generated and shouldn't be altered manually!
- * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2625)
- *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:532)
+ * Generated from: org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2637)
+ *    Called from: org.dmd.dms.util.DmoTypeFormatter.dumpNamedREF(DmoTypeFormatter.java:530)
  */
 @SuppressWarnings("serial")
 public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefinitionREF implements Serializable {
@@ -61,7 +76,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2666)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2678)
     public DmcAttribute<ConcinnityDefinitionREF> cloneIt(){
         synchronized(this){
             DmcTypeConcinnityDefinitionREFSET rc = getNew();
@@ -80,7 +95,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2689)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2701)
     public ConcinnityDefinitionREF add(Object v) throws DmcValueException {
         synchronized(this){
             ConcinnityDefinitionREF rc = typeCheck(v);
@@ -96,7 +111,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2706)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2718)
     public ConcinnityDefinitionREF del(Object v){
         synchronized(this){
             ConcinnityDefinitionREF rc = null;
@@ -120,7 +135,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2731)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2743)
     public Iterator<ConcinnityDefinitionREF> getMV(){
         synchronized(this){
             if (value == null)
@@ -133,7 +148,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
         }
     }
     
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2745)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2757)
     public Set<ConcinnityDefinitionREF> getMVCopy(){
         synchronized(this){
             if (getAttributeInfo().valueType == ValueTypeEnum.HASHSET){
@@ -152,7 +167,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2765)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2777)
     public int getMVSize(){
         synchronized(this){
             if (value == null)
@@ -162,7 +177,7 @@ public class DmcTypeConcinnityDefinitionREFSET extends DmcTypeConcinnityDefiniti
     }
     
     @Override
-    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2776)
+    // org.dmd.dms.util.GenUtility.dumpSETType(GenUtility.java:2788)
     public boolean contains(Object v){
         synchronized(this){
             if (value == null)
