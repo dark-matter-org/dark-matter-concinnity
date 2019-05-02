@@ -16,15 +16,17 @@
 package org.dmd.concinnity.server.generated.dsd;
 
 // Generated from: org.dmd.util.codegen.ImportManager.getFormattedImports(ImportManager.java:82)
-// Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGlobalInterface(DSDArtifactFormatter.java:362)
-import java.util.Iterator;                                              // To provide iterators over definitions - (DSDArtifactFormatter.java:359)
-import org.dmd.concinnity.server.extended.Concept;                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:174)
-import org.dmd.concinnity.server.extended.ConcinnityDefinition;         // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:161)
-import org.dmd.concinnity.server.extended.ConcinnityModule;             // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:174)
-import org.dmd.dmc.types.DotName;                                       // To support the find method for definitions - (DSDefinitionModule.java:163)
+// Called from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGlobalInterface(DSDArtifactFormatter.java:526)
+import java.util.Iterator;                                              // To provide iterators over definitions - (DSDArtifactFormatter.java:521)
+import org.dmd.concinnity.server.extended.Concept;                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:191)
+import org.dmd.concinnity.server.extended.ConcinnityDefinition;         // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:178)
+import org.dmd.concinnity.server.extended.ConcinnityModule;             // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:191)
+import org.dmd.dmc.DmcNameClashException;                               // May be thrown when finding definitions - (DSDArtifactFormatter.java:522)
+import org.dmd.dmc.DmcValueException;                                   // May be thrown when finding definitions - (DSDArtifactFormatter.java:523)
+import org.dmd.dmc.types.DotName;                                       // To support the find method for definitions - (DSDefinitionModule.java:180)
 
 
-// Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGlobalInterface(DSDArtifactFormatter.java:366)
+// Generated from: org.dmd.dmg.generators.DSDArtifactFormatter.generateGlobalInterface(DSDArtifactFormatter.java:530)
 /**
  * This interface is implemented by definition managers that store definitions from the ConcinnityModule module.
  */
@@ -38,11 +40,21 @@ public interface ConcinnityModuleGlobalInterface {
     public int getConceptCount();
     public Concept getConcept(DotName name);
     public Iterator<Concept> getAllConcept();
+    public Concept getConceptDefinition(String name) throws DmcNameClashException, DmcValueException;
+
+    public Iterator<Concept> getConceptDefinitionsByName(String name) throws DmcValueException;
+
+    public int getConceptDefinitionCountByName(String name) throws DmcValueException;
 
     public void addConcinnityModule(ConcinnityModule def);
     public int getConcinnityModuleCount();
     public ConcinnityModule getConcinnityModule(DotName name);
     public Iterator<ConcinnityModule> getAllConcinnityModule();
+    public ConcinnityModule getConcinnityModuleDefinition(String name) throws DmcNameClashException, DmcValueException;
+
+    public Iterator<ConcinnityModule> getConcinnityModuleDefinitionsByName(String name) throws DmcValueException;
+
+    public int getConcinnityModuleDefinitionCountByName(String name) throws DmcValueException;
 
 }
 
