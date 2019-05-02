@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
-    <jar path="/Users/peter/Desktop/dark-matter-jars/dark-matter-concinnity-1.0.1.jar"/>
+    <jar path="/Users/peter/Desktop/dark-matter-jars/dark-matter-concinnity-1.0.2.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/dark-matter-concinnity/dark-matter-concinnity.jardesc" exportErrors="false" exportWarnings="false" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>

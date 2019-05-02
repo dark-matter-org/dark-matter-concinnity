@@ -4,7 +4,7 @@ package org.dmd.concinnity.server.generated.dmw;
 // Called from: org.dmd.dmg.generators.BaseDMWGenerator.dumpWrapper(BaseDMWGenerator.java:442)
 import java.util.ArrayList;                                                             // To support getMVCopy() - (BaseDMWGenerator.java:1181)
 import java.util.Iterator;                                                              // Support copy of MV objects - (BaseDMWGenerator.java:2240)
-import org.dmd.concinnity.server.extended.Concept;                                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:174)
+import org.dmd.concinnity.server.extended.Concept;                                      // A definition from the ConcinnityModule Module - (DSDefinitionModule.java:191)
 import org.dmd.concinnity.server.extended.ConcinnityDefinition;                         // Derived class - (BaseDMWGenerator.java:1248)
 import org.dmd.concinnity.server.extended.ConcinnityModule;                             // Required for getModificationRecorder() - (BaseDMWGenerator.java:1076)
 import org.dmd.concinnity.server.generated.dmw.ConcinnityModuleIterableDMW;             // For multi-valued ConcinnityModule - (BaseDMWGenerator.java:1709)
@@ -16,7 +16,7 @@ import org.dmd.dmc.*;                                                           
 import org.dmd.dmc.definitions.DmcDefinitionIF;                                         // The object is a domain specific definition - (BaseDMWGenerator.java:411)
 import org.dmd.dmc.definitions.DmcDefinitionSet;                                        // Our base to provide definition set storage - (DMWGenerator.java:171)
 import org.dmd.dmc.types.DefinitionName;                                                // Is named by - (BaseDMWGenerator.java:1062)
-import org.dmd.dmc.types.DotName;                                                       // To support the find method for definitions - (DSDefinitionModule.java:163)
+import org.dmd.dmc.types.DotName;                                                       // To support the find method for definitions - (DSDefinitionModule.java:180)
 import org.dmd.dms.ClassDefinition;                                                     // Passing derived class def up the hierarchy - (BaseDMWGenerator.java:1067)
 import org.dmd.dms.generated.dmo.MetaDMSAG;                                             // Attribute defFiles from the meta schema - (BaseDMWGenerator.java:897)
 import org.dmd.dms.generated.dmw.SchemaAndReasonIterableDMW;                            // For multi-valued SchemaAndReason - (BaseDMWGenerator.java:2103)
@@ -555,7 +555,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
         ((ConcinnityModuleDMO) core).remName();
     }
 
-    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:219)
+    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:302)
     // Called from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:212)
     /**
      * All definitions are added to the base definition collection.
@@ -576,7 +576,7 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
         return(ConcinnityDefinitionDefs.values().iterator());
     }
 
-    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:254)
+    // Generated from: org.dmd.dms.DSDefinitionModule.getInterfaceMethodsImplementations(DSDefinitionModule.java:337)
     public void addConcept(Concept def){
         ConceptDefs.add(def);
         addConcinnityDefinition(def);
@@ -594,14 +594,26 @@ abstract public class ConcinnityModuleDMW extends ConcinnityDefinition implement
         return(ConceptDefs.values().iterator());
     }
 
-    // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:222)
+    public Concept getConceptDefinition(String name) throws DmcNameClashException, DmcValueException{
+        return(ConceptDefs.getDefinition(name));
+    }
+
+    public Iterator<Concept> getConceptDefinitionsByName(String name) throws DmcValueException{
+        return(ConceptDefs.getDefinitionsByName(name));
+    }
+
+    public int getConceptDefinitionCountByName(String name) throws DmcValueException{
+        return(ConceptDefs.getDefinitionCountByName(name));
+    }
+
+    // Generated from: org.dmd.dmg.generators.DMWGenerator.dumpAdditionalWrapperFunctions(DMWGenerator.java:221)
     /**
      * This method indicates the name of the module from which this definition was loaded.
+     * And, since this is a module, it's just the name of the module.
      */
     @Override
     public String getNameOfModuleWhereThisCameFrom(){
-        ConcinnityModuleREF ref = ((ConcinnityModuleDMO) core).getDefinedInConcinnityModule();
-        return(ref.getName().getNameString());
+        return(getName().getNameString());
     }
 
 

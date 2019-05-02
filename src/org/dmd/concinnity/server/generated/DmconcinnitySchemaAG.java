@@ -100,22 +100,22 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             ClassDefinitionDMO _ConcinnityDefinitionOBJ = new ClassDefinitionDMO();
             _ConcinnityDefinition = new ClassDefinition(_ConcinnityDefinitionOBJ,DmconcinnityDMSAG.__ConcinnityDefinition);
             _ConcinnityDefinitionOBJ.setName("ConcinnityDefinition");
-            _ConcinnityDefinitionOBJ.setDmdID("-41998");
+            _ConcinnityDefinitionOBJ.setDmdID("-83998");
             _ConcinnityDefinitionOBJ.setClassType("ABSTRACT");
             _ConcinnityDefinitionOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/classes.dmd");
             _ConcinnityDefinitionOBJ.setLineNumber("14");
-            _ConcinnityDefinitionOBJ.addDescription("The ConcinnityDefinition provides a common base for all Concinnity related definitions.");
-            _ConcinnityDefinitionOBJ.setDerivedFrom("meta.Concinnity");
             _ConcinnityDefinitionOBJ.setIsNamedBy("meta.name");
+            _ConcinnityDefinitionOBJ.addDescription("The ConcinnityDefinition provides a common base for all Concinnity related definitions.");
             _ConcinnityDefinitionOBJ.setUseWrapperType("EXTENDED");
-            _ConcinnityDefinitionOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConcinnityDefinitionREF");
-            _ConcinnityDefinitionOBJ.setDmwIteratorClass("ConcinnityDefinitionIterableDMW");
+            _ConcinnityDefinitionOBJ.setDerivedFrom("meta.Concinnity");
             _ConcinnityDefinitionOBJ.addMust("meta.name");
             _ConcinnityDefinitionOBJ.addMust("meta.dotName");
             _ConcinnityDefinitionOBJ.addMust("dmconcinnity.definedInConcinnityModule");
             _ConcinnityDefinitionOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConcinnityDefinitionIterableDMW");
-            _ConcinnityDefinitionOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
+            _ConcinnityDefinitionOBJ.setDmwIteratorClass("ConcinnityDefinitionIterableDMW");
+            _ConcinnityDefinitionOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConcinnityDefinitionREF");
             _ConcinnityDefinitionOBJ.setDotName("dmconcinnity.ConcinnityDefinition.ClassDefinition");
+            _ConcinnityDefinitionOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
             _ConcinnityDefinition.setDefinedIn(this);
             addClassDefList(_ConcinnityDefinition);
 
@@ -123,25 +123,25 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             ClassDefinitionDMO _ConceptOBJ = new ClassDefinitionDMO();
             _Concept = new ClassDefinition(_ConceptOBJ,DmconcinnityDMSAG.__Concept);
             _ConceptOBJ.setName("Concept");
-            _ConceptOBJ.setDmdID("-41997");
+            _ConceptOBJ.setDmdID("-83997");
             _ConceptOBJ.setClassType("STRUCTURAL");
             _ConceptOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/classes.dmd");
             _ConceptOBJ.setLineNumber("36");
-            _ConceptOBJ.addDescription("The Concept class provides a flexible mechanism for defining concepts that can be\n linked in arbitrary or structured ways to other concepts. Concepts allow other, disparate information\n from other dark-matter Domain Specific Languages (DSLs) to be linked together at a conceptual level.\n <p/>\n How you use this mechanism is bounded only by your imagination.");
-            _ConceptOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
             _ConceptOBJ.setIsNamedBy("meta.name");
+            _ConceptOBJ.addDescription("The Concept class provides a flexible mechanism for defining concepts that can be\n linked in arbitrary or structured ways to other concepts. Concepts allow other, disparate information\n from other dark-matter Domain Specific Languages (DSLs) to be linked together at a conceptual level.\n <p/>\n How you use this mechanism is bounded only by your imagination.");
             _ConceptOBJ.setUseWrapperType("EXTENDED");
-            _ConceptOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConceptREF");
-            _ConceptOBJ.setDmwIteratorClass("ConceptIterableDMW");
+            _ConceptOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
+            _ConceptOBJ.addMust("meta.name");
             _ConceptOBJ.addMay("dmconcinnity.is");
             _ConceptOBJ.addMay("dmconcinnity.isLike");
             _ConceptOBJ.addMay("dmconcinnity.isRelatedTo");
             _ConceptOBJ.addMay("dmconcinnity.represents");
             _ConceptOBJ.addMay("meta.hint");
-            _ConceptOBJ.addMust("meta.name");
             _ConceptOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConceptIterableDMW");
-            _ConceptOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
+            _ConceptOBJ.setDmwIteratorClass("ConceptIterableDMW");
+            _ConceptOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConceptREF");
             _ConceptOBJ.setDotName("dmconcinnity.Concept.ClassDefinition");
+            _ConceptOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
             _Concept.setDefinedIn(this);
             addClassDefList(_Concept);
 
@@ -149,25 +149,25 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
             ClassDefinitionDMO _ConcinnityModuleOBJ = new ClassDefinitionDMO();
             _ConcinnityModule = new ClassDefinition(_ConcinnityModuleOBJ,DmconcinnityDMSAG.__ConcinnityModule);
             _ConcinnityModuleOBJ.setName("ConcinnityModule");
-            _ConcinnityModuleOBJ.setDmdID("-41999");
-            _ConcinnityModuleOBJ.setInternallyGenerated("true");
+            _ConcinnityModuleOBJ.setDmdID("-83999");
             _ConcinnityModuleOBJ.setClassType("STRUCTURAL");
             _ConcinnityModuleOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/module.dmd");
             _ConcinnityModuleOBJ.setLineNumber("11");
-            _ConcinnityModuleOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
+            _ConcinnityModuleOBJ.setInternallyGenerated("true");
             _ConcinnityModuleOBJ.setIsNamedBy("meta.name");
             _ConcinnityModuleOBJ.setUseWrapperType("EXTENDED");
-            _ConcinnityModuleOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConcinnityModuleREF");
-            _ConcinnityModuleOBJ.setDmwIteratorClass("ConcinnityModuleIterableDMW");
+            _ConcinnityModuleOBJ.setDerivedFrom("dmconcinnity.ConcinnityDefinition");
+            _ConcinnityModuleOBJ.addMust("meta.name");
             _ConcinnityModuleOBJ.addMay("meta.loadSchemaClass");
             _ConcinnityModuleOBJ.addMay("meta.description");
             _ConcinnityModuleOBJ.addMay("meta.defFiles");
             _ConcinnityModuleOBJ.addMay("dmconcinnity.dependsOnConcinnityModule");
-            _ConcinnityModuleOBJ.addMust("meta.name");
             _ConcinnityModuleOBJ.setDmwIteratorImport("org.dmd.concinnity.server.generated.dmw.ConcinnityModuleIterableDMW");
+            _ConcinnityModuleOBJ.setDmwIteratorClass("ConcinnityModuleIterableDMW");
+            _ConcinnityModuleOBJ.setDmtREFImport("org.dmd.concinnity.shared.generated.types.ConcinnityModuleREF");
             _ConcinnityModuleOBJ.setDsdModuleDefinition("dmconcinnity.ConcinnityModule");
-            _ConcinnityModuleOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
             _ConcinnityModuleOBJ.setDotName("dmconcinnity.ConcinnityModule.ClassDefinition");
+            _ConcinnityModuleOBJ.setPartOfDefinitionModule("dmconcinnity.ConcinnityModule");
             _ConcinnityModule.setDefinedIn(this);
             addClassDefList(_ConcinnityModule);
 
@@ -177,95 +177,95 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _definedInConcinnityModuleOBJ = new AttributeDefinitionDMO();
             _definedInConcinnityModule = new AttributeDefinition(_definedInConcinnityModuleOBJ);
-            _definedInConcinnityModuleOBJ.setType("dmconcinnity.ConcinnityModule");
+            _definedInConcinnityModuleOBJ.addDescription("Indicates the name of the ConcinnityModule in which a definition is defined.");
             _definedInConcinnityModuleOBJ.setName("definedInConcinnityModule");
             _definedInConcinnityModuleOBJ.setDmdID("-41999");
-            _definedInConcinnityModuleOBJ.addDescription("Indicates the name of the ConcinnityModule in which a definition is defined.");
-            _definedInConcinnityModuleOBJ.setDotName("dmconcinnity.definedInConcinnityModule.AttributeDefinition");
-            _definedInConcinnityModule.setDefinedIn(this);
+            _definedInConcinnityModuleOBJ.setType("dmconcinnity.ConcinnityModule");
             _definedInConcinnityModuleOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _definedInConcinnityModuleOBJ.setDotName("dmconcinnity.definedInConcinnityModule.AttributeDefinition");
             _definedInConcinnityModuleOBJ.setLineNumber("6");
+            _definedInConcinnityModule.setDefinedIn(this);
             addAttributeDefList(_definedInConcinnityModule);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _dependsOnConcinnityModuleOBJ = new AttributeDefinitionDMO();
             _dependsOnConcinnityModule = new AttributeDefinition(_dependsOnConcinnityModuleOBJ);
-            _dependsOnConcinnityModuleOBJ.setType("dmconcinnity.ConcinnityModule");
+            _dependsOnConcinnityModuleOBJ.addDescription("Indicates the ConcinnityModule on which something depends.");
             _dependsOnConcinnityModuleOBJ.setName("dependsOnConcinnityModule");
             _dependsOnConcinnityModuleOBJ.setDmdID("-41998");
-            _dependsOnConcinnityModuleOBJ.addDescription("Indicates the ConcinnityModule on which something depends.");
-            _dependsOnConcinnityModuleOBJ.setValueType("MULTI");
-            _dependsOnConcinnityModuleOBJ.setDotName("dmconcinnity.dependsOnConcinnityModule.AttributeDefinition");
-            _dependsOnConcinnityModule.setDefinedIn(this);
+            _dependsOnConcinnityModuleOBJ.setType("dmconcinnity.ConcinnityModule");
             _dependsOnConcinnityModuleOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _dependsOnConcinnityModuleOBJ.setDotName("dmconcinnity.dependsOnConcinnityModule.AttributeDefinition");
             _dependsOnConcinnityModuleOBJ.setLineNumber("13");
+            _dependsOnConcinnityModuleOBJ.setValueType("MULTI");
+            _dependsOnConcinnityModule.setDefinedIn(this);
             addAttributeDefList(_dependsOnConcinnityModule);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _isOBJ = new AttributeDefinitionDMO();
             _is = new AttributeDefinition(_isOBJ);
-            _isOBJ.setType("dmconcinnity.Concept");
+            _isOBJ.addDescription("Indicates that a Concept is directly related to another Concept.\n This could be used to model a derivation hierarchy, for example, or simple to indicate\n that a Concept is a direct embodiment of a Concept.");
             _isOBJ.setName("is");
             _isOBJ.setDmdID("-41997");
-            _isOBJ.addDescription("Indicates that a Concept is directly related to another Concept.\n This could be used to model a derivation hierarchy, for example, or simple to indicate\n that a Concept is a direct embodiment of a Concept.");
-            _isOBJ.setDotName("dmconcinnity.is.AttributeDefinition");
-            _is.setDefinedIn(this);
+            _isOBJ.setType("dmconcinnity.Concept");
             _isOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _isOBJ.setDotName("dmconcinnity.is.AttributeDefinition");
             _isOBJ.setLineNumber("21");
+            _is.setDefinedIn(this);
             addAttributeDefList(_is);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _isLikeOBJ = new AttributeDefinitionDMO();
             _isLike = new AttributeDefinition(_isLikeOBJ);
-            _isLikeOBJ.setType("dmconcinnity.Concept");
+            _isLikeOBJ.addDescription("Indicates that a Concept is like one or more other Concepts. This implies\n that the Concept has characteristics of the other Concepts. For instance, a hydrofoil\n is like a boat, but it isn't a boat.");
             _isLikeOBJ.setName("isLike");
             _isLikeOBJ.setDmdID("-41996");
-            _isLikeOBJ.addDescription("Indicates that a Concept is like one or more other Concepts. This implies\n that the Concept has characteristics of the other Concepts. For instance, a hydrofoil\n is like a boat, but it isn't a boat.");
-            _isLikeOBJ.setValueType("MULTI");
-            _isLikeOBJ.setDotName("dmconcinnity.isLike.AttributeDefinition");
-            _isLike.setDefinedIn(this);
+            _isLikeOBJ.setType("dmconcinnity.Concept");
             _isLikeOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _isLikeOBJ.setDotName("dmconcinnity.isLike.AttributeDefinition");
             _isLikeOBJ.setLineNumber("30");
+            _isLikeOBJ.setValueType("MULTI");
+            _isLike.setDefinedIn(this);
             addAttributeDefList(_isLike);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _isRelatedToOBJ = new AttributeDefinitionDMO();
             _isRelatedTo = new AttributeDefinition(_isRelatedToOBJ);
-            _isRelatedToOBJ.setType("dmconcinnity.Concept");
+            _isRelatedToOBJ.addDescription("Indicates that a Concept is loosely related to one or more other Concepts.\n This doesn't necessarily imply that the Concept has characteristics of the other Concepts,\n merely that it has an association with other concepts.");
             _isRelatedToOBJ.setName("isRelatedTo");
             _isRelatedToOBJ.setDmdID("-41995");
-            _isRelatedToOBJ.addDescription("Indicates that a Concept is loosely related to one or more other Concepts.\n This doesn't necessarily imply that the Concept has characteristics of the other Concepts,\n merely that it has an association with other concepts.");
-            _isRelatedToOBJ.setValueType("MULTI");
-            _isRelatedToOBJ.setDotName("dmconcinnity.isRelatedTo.AttributeDefinition");
-            _isRelatedTo.setDefinedIn(this);
+            _isRelatedToOBJ.setType("dmconcinnity.Concept");
             _isRelatedToOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _isRelatedToOBJ.setDotName("dmconcinnity.isRelatedTo.AttributeDefinition");
             _isRelatedToOBJ.setLineNumber("39");
+            _isRelatedToOBJ.setValueType("MULTI");
+            _isRelatedTo.setDefinedIn(this);
             addAttributeDefList(_isRelatedTo);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _representsOBJ = new AttributeDefinitionDMO();
             _represents = new AttributeDefinition(_representsOBJ);
-            _representsOBJ.setType("dmconcinnity.Concept");
+            _representsOBJ.addDescription("Indicates that a Concept directly represents another Concept, but usually\n in a different context. For instance, you may have an EnumValue that represents a piece\n of Hardware.");
             _representsOBJ.setName("represents");
             _representsOBJ.setDmdID("-41994");
-            _representsOBJ.addDescription("Indicates that a Concept directly represents another Concept, but usually\n in a different context. For instance, you may have an EnumValue that represents a piece\n of Hardware.");
-            _representsOBJ.setDotName("dmconcinnity.represents.AttributeDefinition");
-            _represents.setDefinedIn(this);
+            _representsOBJ.setType("dmconcinnity.Concept");
             _representsOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _representsOBJ.setDotName("dmconcinnity.represents.AttributeDefinition");
             _representsOBJ.setLineNumber("47");
+            _represents.setDefinedIn(this);
             addAttributeDefList(_represents);
 
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             AttributeDefinitionDMO _parentOBJ = new AttributeDefinitionDMO();
             _parent = new AttributeDefinition(_parentOBJ);
-            _parentOBJ.setType("dmconcinnity.Concept");
+            _parentOBJ.addDescription("Way too long!");
             _parentOBJ.setName("parent");
             _parentOBJ.setDmdID("-41993");
-            _parentOBJ.addDescription("Indicates that a Concept is direct child of some parent Concept. For instance,\n you might be creating a high level concept for mapping enuemerations from one disparate system\n to another. You could define a gametypeenum that was basedOn enumeration (see dmconcinnity.dmcm).\n <pre>\n Concept\n name        GameTypeEnum\n basedOn     Enumeration\n description Broad categories of games.\n </pre>\n You could then define a series of values for the enumeration by indicating a parent relationship:\n <pre>\n Concept\n name        fps\n is          EnumValue\n parent      GameTypeEnum\n description First person shooter.\n </pre>\n <pre>\n Concept\n name        puzzle\n is          EnumValue\n parent      GameTypeEnum\n description A game that requires the player to solve puzzles of some sort.\n </pre>");
-            _parentOBJ.setDotName("dmconcinnity.parent.AttributeDefinition");
-            _parent.setDefinedIn(this);
+            _parentOBJ.setType("dmconcinnity.Concept");
             _parentOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/attributes.dmd");
+            _parentOBJ.setDotName("dmconcinnity.parent.AttributeDefinition");
             _parentOBJ.setLineNumber("76");
+            _parent.setDefinedIn(this);
             addAttributeDefList(_parent);
 
     }
@@ -295,17 +295,17 @@ public class DmconcinnitySchemaAG extends SchemaDefinition {
 // Generated from: org.dmd.dmg.util.SchemaFormatter.getObjectAsCode(SchemaFormatter.java:585)
             DSDefinitionModuleDMO _ConcinnityModuleDSDOBJ = new DSDefinitionModuleDMO();
             _ConcinnityModuleDSD = new DSDefinitionModule(_ConcinnityModuleDSDOBJ);
+            _ConcinnityModuleDSDOBJ.setFileExtension("dmcm");
             _ConcinnityModuleDSDOBJ.setName("ConcinnityModule");
             _ConcinnityModuleDSDOBJ.setDmdID("1");
-            _ConcinnityModuleDSDOBJ.setSupportDynamicSchemaLoading("true");
             _ConcinnityModuleDSDOBJ.setModuleClassName("ConcinnityModule");
-            _ConcinnityModuleDSDOBJ.setFileExtension("dmcm");
-            _ConcinnityModuleDSDOBJ.setDefinedInModuleAttribute("dmconcinnity.definedInConcinnityModule");
-            _ConcinnityModuleDSDOBJ.setDotName("dmconcinnity.ConcinnityModule.DSDefinitionModule");
-            _ConcinnityModuleDSDOBJ.setModuleDependenceAttribute("dmconcinnity.dependsOnConcinnityModule");
-            _ConcinnityModuleDSDOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/module.dmd");
             _ConcinnityModuleDSDOBJ.setBaseDefinition("dmconcinnity.ConcinnityDefinition");
+            _ConcinnityModuleDSDOBJ.setModuleDependenceAttribute("dmconcinnity.dependsOnConcinnityModule");
+            _ConcinnityModuleDSDOBJ.setDefinedInModuleAttribute("dmconcinnity.definedInConcinnityModule");
+            _ConcinnityModuleDSDOBJ.setFile("/src/org/dmd/concinnity/shared/dmconfig/module.dmd");
+            _ConcinnityModuleDSDOBJ.setDotName("dmconcinnity.ConcinnityModule.DSDefinitionModule");
             _ConcinnityModuleDSDOBJ.setLineNumber("11");
+            _ConcinnityModuleDSDOBJ.setSupportDynamicSchemaLoading("true");
             _ConcinnityModuleDSD.setDefinedIn(this);
             addDsdModuleList(_ConcinnityModuleDSD);
 
